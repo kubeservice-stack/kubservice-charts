@@ -19,6 +19,6 @@ entries:
     - https://github.com/kubeservice-stack/pingmesh-agent
     type: application
     urls:
-    - prometheus-pingmesh-exporter-1.0.0.tgz
+    - https://kubeservice-stack.github.io/kubservice-charts/prometheus-pingmesh-exporter-1.0.0.tgz
     version: 1.0.0
 generated: "2022-11-04T12:54:03.076075+08:00"
