@@ -1,0 +1,24 @@
+apiVersion: v1
+entries:
+  prometheus-pingmesh-exporter:
+  - apiVersion: v2
+    appVersion: 0.22.0
+    created: "2022-11-04T12:54:03.079327+08:00"
+    description: Prometheus Pingmesh Exporter
+    digest: 5be1ae6f8481484e82e36e112b14b804eb7591af6222f464f33304f5338cbe25
+    home: https://github.com/kubeservice-stack/pingmesh-agent
+    keywords:
+    - prometheus
+    - pimgmesh
+    - monitoring
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: prometheus-pingmesh-exporter
+    sources:
+    - https://github.com/kubeservice-stack/pingmesh-agent
+    type: application
+    urls:
+    - prometheus-pingmesh-exporter-1.0.0.tgz
+    version: 1.0.0
+generated: "2022-11-04T12:54:03.076075+08:00"
