@@ -47,10 +47,10 @@ helm upgrade [RELEASE_NAME] [CHART] --install
 
 _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documentation._
 
-## From 0.22 to 1.0
+## From 0.22.0 to 1.0.1
 
 ```console
-helm upgrade [RELEASE_NAME] prometheus-pingmesh-exporter --version 1.0
+helm upgrade [RELEASE_NAME] prometheus-pingmesh-exporter --version 1.0.1
 ```
 
 ## Configuration
