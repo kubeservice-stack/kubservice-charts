@@ -66,3 +66,31 @@ $ helm show values prometheus-pingmesh-exporter
 ```
 
 See [kubeservice-stack/pingmesh-agent/README.md](https://github.com/kubeservice-stack/pingmesh-agent) for further information.
+
+## pingmesh pinglist configuration
+
+```console
+setting:
+  # the maximum amount of concurrent to ping, uint
+  concurrent_limit: 20
+  # interval to exec ping in seconds, float
+  interval: 60.0
+  # The maximum delay time to ping in milliseconds, float
+  delay: 200
+  # ping timeout in seconds, float
+  timeout: 2.0
+  # send ip addr
+  source_ip_addr: 0.0.0.0
+  # send ip protocal
+  ip_protocol: ip6
+
+mesh:
+  add-ping-public: 
+    name: ping-public-demo
+    type: OtherIP
+    ips :
+      - 127.0.0.1
+      - 8.8.8.8
+      - www.baidu.com
+      - kubernetes.default.svc.cluster.local
+```
