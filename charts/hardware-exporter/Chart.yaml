@@ -1,0 +1,23 @@
+annotations:
+  category: Analytics
+  licenses: Apache-2.0
+apiVersion: v2
+appVersion: 1.5.0
+dependencies:
+- name: common
+  repository: https://charts.bitnami.com/bitnami
+  tags:
+  - bitnami-common
+  version: 2.x.x
+description: Prometheus exporter for hardware and you can use this exporter to get server's bmc and bios' info
+keywords:
+- prometheus
+- hardware-exporter
+- monitoring
+maintainers:
+- email: dlswdjtu@163.com
+  name: shenwei
+- url: //github.com/kubeservice-stack/hardware-exporter/
+name: hardware-exporter
+type: application
+version: 0.1.0
