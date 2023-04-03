@@ -64,6 +64,14 @@ spec:
           resources:
             {{- toYaml .Values.resources | trim | nindent 12 }}
           {{- end }}
+          {{- if .Values.livenessProbe }}
+          livenessProbe:
+            {{ toYaml .Values.livenessProbe | trim | nindent 12 }}
+          {{- end }}
+          {{- if .Values.readinessProbe }}
+          readinessProbe:
+            {{ toYaml .Values.readinessProbe | trim | nindent 12 }}
+          {{- end }}
           {{- if .Values.securityContext }}
           securityContext:
             {{ toYaml .Values.securityContext | trim | nindent 12 }}

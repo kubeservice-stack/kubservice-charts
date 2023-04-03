@@ -49,6 +49,9 @@ resources: {}
   #  cpu: 100m
   #  memory: 128Mi
   #
+livenessProbe: {}
+readinessProbe: {}
+
 securityContext:
   # ebpf_exporter requires elevated privileges.
   privileged: true

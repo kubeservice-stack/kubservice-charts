@@ -9,7 +9,7 @@ keywords:
 type: application
 version: 0.0.1
 appVersion: 2.0.0
-home: https://github.com/cloudflare/ebpf_exporter
+home: https://github.com/kubeservice-stack/kubservice-charts
 sources:
 - https://github.com/cloudflare/ebpf_exporter
 maintainers:
