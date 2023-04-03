@@ -1,0 +1,31 @@
+apiVersion: admissionregistration.k8s.io/v1
+kind: MutatingWebhookConfiguration
+metadata:
+  name: mutating-lxcfs-admission-webhook-cfg
+  namespace: {{ .Release.Namespace | quote }}
+  labels:
+    app: lxcfs-admission-webhook
+  annotations:
+    cert-manager.io/inject-ca-from: {{ .Release.Namespace | quote }}/{{ include "kubeservice-lxcfs-webhook.fullname" . }}-certificate
+webhooks:
+  - name: mutating-{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace | quote }}.svc
+    clientConfig:
+      service:
+        name: {{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc
+        namespace: {{ .Release.Namespace | quote }}
+        path: "/mutate"
+    rules:
+      - operations: ["CREATE"]
+        apiGroups: [""]
+        apiVersions: ["v1"]
+        resources: ["pods"]
+        scope:       "Namespaced"
+    admissionReviewVersions: ["v1","v1beta1"]
+    sideEffects: None
+    timeoutSeconds: 15
+    failurePolicy: Ignore
+    reinvocationPolicy: Never
+    matchPolicy: Equivalent
+    namespaceSelector:
+      matchLabels:
+        lxcfs-admission-webhook: enabled

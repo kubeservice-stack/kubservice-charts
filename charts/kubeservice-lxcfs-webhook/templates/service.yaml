@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc
+  namespace: {{ .Release.Namespace | quote }}
+  labels:
+    {{- include "kubeservice-lxcfs-webhook.selectorLabels" . | nindent 4 }}
+spec:
+  publishNotReadyAddresses: true
+  ports:
+  - port: 443
+    targetPort: 443
+  selector:
+    {{- include "kubeservice-lxcfs-webhook.selectorLabels" . | nindent 4 }}

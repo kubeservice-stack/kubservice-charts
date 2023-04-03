@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: name: {{ include "kubeservice-lxcfs-webhook.fullname" . }}-lxcfs
+  namespace: {{ .Release.Namespace | quote }}
+  labels:
+    {{- include "kubeservice-lxcfs-webhook.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "kubeservice-lxcfs-webhook.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "kubeservice-lxcfs-webhook.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "kubeservice-lxcfs-webhook.serviceAccountName" . }}
+      hostPID: true
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        effect: NoSchedule
+      containers:
+      - name: lxcfs
+        image: "{{ .Values.lxcfs.image.repository }}:{{ .Values.lxcfs.image.tag | default .Chart.AppVersion }}"
+        imagePullPolicy: {{ .Values.lxcfs.image.pullPolicy }}
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - name: cgroup
+          mountPath: /sys/fs/cgroup
+        - name: lxcfs
+          mountPath: /var/lib/lxcfs
+          mountPropagation: Bidirectional
+        - name: usr-local
+          mountPath: /usr/local
+        - name: usr-lib64
+          mountPath: /usr/lib64
+      volumes:
+      - name: cgroup
+        hostPath:
+          path: /sys/fs/cgroup
+      - name: usr-local
+        hostPath:
+          path: /usr/local
+      - name: usr-lib64
+        hostPath:
+          path: /usr/lib64
+      - name: lxcfs
+        hostPath:
+          path: /var/lib/lxcfs
+          type: DirectoryOrCreate
