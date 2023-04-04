@@ -7,6 +7,7 @@ entries:
     description: A Helm chart for ebpf_exporter
     digest: a6035f0fb3f8849be6db29c652e580dba6455f063f95f20c8743a5b69ead35ac
     home: https://github.com/kubeservice-stack/kubservice-charts
+    icon: https://avatars.githubusercontent.com/u/113495809
     keywords:
     - metric
     - prometheus
@@ -29,6 +30,7 @@ entries:
     description: A Kubernetes Admission Webhook for Linux Container Resources View.
     digest: 54c9d322fbded034f2cf27fe300a69953c3cb4592352b804c9c2e2ae944c96d0
     home: https://github.com/kubeservice-stack/lxcfs-webhook
+    icon: https://avatars.githubusercontent.com/u/113495809
     keywords:
     - admission webhook
     - lxcfs
@@ -50,6 +52,7 @@ entries:
     description: Prometheus Pingmesh Exporter
     digest: 0e239336241d6568e68b3297eeef6382aee764996ec66bf15cefae7143a3fd62
     home: https://github.com/kubeservice-stack/pingmesh-agent
+    icon: https://avatars.githubusercontent.com/u/113495809
     keywords:
     - prometheus
     - pimgmesh
