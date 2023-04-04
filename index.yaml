@@ -3,9 +3,9 @@ entries:
   kubeservice-ebpf-exporter:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-04-04T10:18:00.463635+08:00"
+    created: "2023-04-04T11:38:12.238101+08:00"
     description: A Helm chart for ebpf_exporter
-    digest: a6035f0fb3f8849be6db29c652e580dba6455f063f95f20c8743a5b69ead35ac
+    digest: 1232f77623fdd986d24d363841c8533d9215277870a4cfa0c085a6cc4c333df3
     home: https://github.com/kubeservice-stack/kubservice-charts
     icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
     keywords:
@@ -26,9 +26,9 @@ entries:
   kubeservice-lxcfs-webhook:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-04-04T10:18:00.46412+08:00"
+    created: "2023-04-04T11:38:12.2385+08:00"
     description: A Kubernetes Admission Webhook for Linux Container Resources View.
-    digest: 54c9d322fbded034f2cf27fe300a69953c3cb4592352b804c9c2e2ae944c96d0
+    digest: 263dae45abe885ea2a401798c663eca46f9aaf231fbf09275c47a99928b6e4d3
     home: https://github.com/kubeservice-stack/lxcfs-webhook
     icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
     keywords:
@@ -48,9 +48,9 @@ entries:
   prometheus-pingmesh-exporter:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2023-04-04T10:18:00.466054+08:00"
+    created: "2023-04-04T11:38:12.242091+08:00"
     description: Prometheus Pingmesh Exporter
-    digest: 0e239336241d6568e68b3297eeef6382aee764996ec66bf15cefae7143a3fd62
+    digest: e4078d0e3e6de62855e40b046ebf6989f8b8d802d9e242807b22b7101010fce3
     home: https://github.com/kubeservice-stack/pingmesh-agent
     icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
     keywords:
@@ -69,11 +69,10 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 0.22.0
-    created: "2023-04-04T10:18:00.465055+08:00"
+    created: "2023-04-04T11:38:12.239436+08:00"
     description: Prometheus Pingmesh Exporter
     digest: 5be1ae6f8481484e82e36e112b14b804eb7591af6222f464f33304f5338cbe25
     home: https://github.com/kubeservice-stack/pingmesh-agent
-    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
     keywords:
     - prometheus
     - pimgmesh
@@ -88,4 +87,4 @@ entries:
     urls:
     - https://kubeservice-stack.github.io/kubservice-charts/prometheus-pingmesh-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-04T10:18:00.462386+08:00"
+generated: "2023-04-04T11:38:12.237131+08:00"
