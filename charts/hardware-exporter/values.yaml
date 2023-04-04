@@ -67,7 +67,7 @@ serviceAccount:
 image:
   registry:
   repository: matthewshen/hardware-exporter
-  tag: master
+  tag: ""
   digest: ""
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -253,7 +253,31 @@ nodeSelector: {}
 ## @param tolerations Tolerations for pod assignment. Evaluated as a template.
 ## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
 ##
-tolerations: []
+tolerations:
+  - operator: Exists
+    effect: NoSchedule
+  - key: CriticalAddonsOnly
+    operator: Exists
+  - operator: Exists
+    effect: NoExecute
+  - key: node.kubernetes.io/not-ready
+    operator: Exists
+    effect: NoExecute
+  - key: node.kubernetes.io/unreachable
+    operator: Exists
+    effect: NoExecute
+  - key: node.kubernetes.io/disk-pressure
+    operator: Exists
+    effect: NoSchedule
+  - key: node.kubernetes.io/memory-pressure
+    operator: Exists
+    effect: NoSchedule
+  - key: node.kubernetes.io/pid-pressure
+    operator: Exists
+    effect: NoSchedule
+  - key: node.kubernetes.io/unschedulable
+    operator: Exists
+    effect: NoSchedule
 ## @param customStartupProbe Custom liveness probe for the Hardware exporter container
 ##
 customStartupProbe: {}
@@ -322,7 +346,8 @@ serviceMonitor:
   metricRelabelings: []
   ## @param serviceMonitor.labels Extra labels for the ServiceMonitor
   ##
-  labels: {}
+  labels:
+    app.kubernetes.io/component: hardware-exporter
   ## @param serviceMonitor.honorLabels honorLabels chooses the metric's labels on collisions with target labels
   ##
   honorLabels: false
