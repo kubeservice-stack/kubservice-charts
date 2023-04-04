@@ -24,6 +24,7 @@ version: 1.0.0
 appVersion: "1.0.0"
 
 home: https://github.com/kubeservice-stack/lxcfs-webhook
+icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
 keywords:
 - admission webhook
 - lxcfs
