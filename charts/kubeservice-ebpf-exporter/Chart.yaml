@@ -1,5 +1,5 @@
 apiVersion: v2
-name: ebpf-exporter
+name: kubeservice-ebpf-exporter
 description: A Helm chart for ebpf_exporter
 keywords:
 - metric
@@ -7,8 +7,8 @@ keywords:
 - kubernetes
 - ebpf
 type: application
-version: 0.0.1
-appVersion: 2.0.0
+version: 1.0.0
+appVersion: 1.0.0
 home: https://github.com/kubeservice-stack/kubservice-charts
 sources:
 - https://github.com/cloudflare/ebpf_exporter
