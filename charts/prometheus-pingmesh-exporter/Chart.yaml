@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: 1.0.1
 description: Prometheus Pingmesh Exporter
 home: https://github.com/kubeservice-stack/pingmesh-agent
-icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
 keywords:
 - prometheus
 - pimgmesh
