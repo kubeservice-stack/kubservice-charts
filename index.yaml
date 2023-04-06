@@ -3,7 +3,7 @@ entries:
   kubeservice-ebpf-exporter:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-04-04T11:38:12.238101+08:00"
+    created: "2023-04-06T12:26:49.209076+08:00"
     description: A Helm chart for ebpf_exporter
     digest: 1232f77623fdd986d24d363841c8533d9215277870a4cfa0c085a6cc4c333df3
     home: https://github.com/kubeservice-stack/kubservice-charts
@@ -26,7 +26,7 @@ entries:
   kubeservice-lxcfs-webhook:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-04-04T11:38:12.2385+08:00"
+    created: "2023-04-06T12:26:49.209636+08:00"
     description: A Kubernetes Admission Webhook for Linux Container Resources View.
     digest: 263dae45abe885ea2a401798c663eca46f9aaf231fbf09275c47a99928b6e4d3
     home: https://github.com/kubeservice-stack/lxcfs-webhook
@@ -48,11 +48,11 @@ entries:
   prometheus-pingmesh-exporter:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2023-04-04T11:38:12.242091+08:00"
+    created: "2023-04-06T12:26:49.212191+08:00"
     description: Prometheus Pingmesh Exporter
-    digest: e4078d0e3e6de62855e40b046ebf6989f8b8d802d9e242807b22b7101010fce3
+    digest: f4a2aa1525ca38a532ad0c18cee398e18ce04d2271891aecf46d1de44f8db494
     home: https://github.com/kubeservice-stack/pingmesh-agent
-    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
     - prometheus
     - pimgmesh
@@ -69,7 +69,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 0.22.0
-    created: "2023-04-04T11:38:12.239436+08:00"
+    created: "2023-04-06T12:26:49.210936+08:00"
     description: Prometheus Pingmesh Exporter
     digest: 5be1ae6f8481484e82e36e112b14b804eb7591af6222f464f33304f5338cbe25
     home: https://github.com/kubeservice-stack/pingmesh-agent
@@ -87,4 +87,4 @@ entries:
     urls:
     - https://kubeservice-stack.github.io/kubservice-charts/prometheus-pingmesh-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-04T11:38:12.237131+08:00"
+generated: "2023-04-06T12:26:49.20781+08:00"
