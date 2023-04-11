@@ -5,12 +5,12 @@ metadata:
   namespace: {{ .Release.Namespace | quote }}
 spec:
   dnsNames:
-  - '{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace | quote }}.svc'
-  - '{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace | quote }}.svc.cluster.local'
-  - 'mutating-{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace | quote }}.svc'
-  - 'validation-{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace | quote }}.svc'
-  - 'mutating-{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace | quote }}.svc.cluster.local'
-  - 'validation-{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace | quote }}.svc.cluster.local'
+  - '{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace }}.svc'
+  - '{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace }}.svc.cluster.local'
+  - 'mutating-{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace }}.svc'
+  - 'validation-{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace }}.svc'
+  - 'mutating-{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace }}.svc.cluster.local'
+  - 'validation-{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace }}.svc.cluster.local'
   issuerRef:
     kind: Issuer
     name: '{{ include "kubeservice-lxcfs-webhook.fullname" . }}-selfsigned-issuer'
