@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: '{{ include "kubeservice-custom-limitrange.fullname" . }}-certificate'
+  namespace: {{ .Release.Namespace | quote }}
+spec:
+  dnsNames:
+  - '{{ include "kubeservice-custom-limitrange.fullname" . }}-svc.{{ .Release.Namespace }}.svc'
+  - '{{ include "kubeservice-custom-limitrange.fullname" . }}-svc.{{ .Release.Namespace }}.svc.cluster.local'
+  - 'mutating-{{ include "kubeservice-custom-limitrange.fullname" . }}-svc.{{ .Release.Namespace }}.svc'
+  - 'mutating-pods-{{ include "kubeservice-custom-limitrange.fullname" . }}-svc.{{ .Release.Namespace }}.svc'
+  - 'validation-{{ include "kubeservice-custom-limitrange.fullname" . }}-svc.{{ .Release.Namespace }}.svc'
+  - 'mutating-{{ include "kubeservice-custom-limitrange.fullname" . }}-svc.{{ .Release.Namespace }}.svc.cluster.local'
+  - 'validation-{{ include "kubeservice-custom-limitrange.fullname" . }}-svc.{{ .Release.Namespace }}.svc.cluster.local'
+  issuerRef:
+    kind: Issuer
+    name: '{{ include "kubeservice-custom-limitrange.fullname" . }}-selfsigned-issuer'
+  secretName: '{{ include "kubeservice-custom-limitrange.fullname" . }}-certificate'

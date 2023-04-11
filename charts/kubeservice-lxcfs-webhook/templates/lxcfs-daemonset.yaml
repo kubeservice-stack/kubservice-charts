@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: name: {{ include "kubeservice-lxcfs-webhook.fullname" . }}-lxcfs
+  name: kubeservice-lxcfs
   namespace: {{ .Release.Namespace | quote }}
   labels:
     {{- include "kubeservice-lxcfs-webhook.labels" . | nindent 4 }}

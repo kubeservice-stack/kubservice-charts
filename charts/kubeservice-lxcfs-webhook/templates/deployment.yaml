@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "kubeservice-lxcfs-webhook.fullname" . }}
+  name: kubeservice-lxcfs-webhook
   labels:
     {{- include "kubeservice-lxcfs-webhook.labels" . | nindent 4 }}
 spec:
@@ -31,8 +31,8 @@ spec:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "{{ .Values.webhook.image.repository }}:{{ .Values.webhook.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.webhook.image.pullPolicy }}
           ports:
             - name: http
               containerPort: 80

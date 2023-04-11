@@ -6,9 +6,9 @@ metadata:
   labels:
     app: lxcfs-admission-webhook
   annotations:
-    cert-manager.io/inject-ca-from: {{ .Release.Namespace | quote }}/{{ include "kubeservice-lxcfs-webhook.fullname" . }}-certificate
+    cert-manager.io/inject-ca-from: {{ .Release.Namespace }}/{{ include "kubeservice-lxcfs-webhook.fullname" . }}-certificate
 webhooks:
-  - name: mutating-{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace | quote }}.svc
+  - name: mutating-{{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc.{{ .Release.Namespace }}.svc
     clientConfig:
       service:
         name: {{ include "kubeservice-lxcfs-webhook.fullname" . }}-svc
