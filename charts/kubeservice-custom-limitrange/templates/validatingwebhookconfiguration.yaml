@@ -1,0 +1,54 @@
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  name: validating-webhook-configuration
+  namespace: {{ .Release.Namespace | quote }}
+  labels:
+    app: validating-webhook-configuration
+  annotations:
+    cert-manager.io/inject-ca-from:  {{ .Release.Namespace }}/{{ include "kubeservice-custom-limitrange.fullname" . }}-certificate
+webhooks:
+  - name: validating-{{ include "kubeservice-custom-limitrange.fullname" . }}-svc.{{ .Release.Namespace }}.svc
+    admissionReviewVersions: ["v1","v1beta1"]
+    clientConfig:
+      service:
+        name: {{ include "kubeservice-custom-limitrange.fullname" . }}-svc
+        namespace: {{ .Release.Namespace | quote }}
+        path: /validate-custom-cmss-com-v1-customlimitrange
+        port: 443
+    rules:
+      - operations: ["CREATE", "UPDATE"]
+        apiGroups: ["custom.cmss.com"]
+        apiVersions: ["v1"]
+        resources: ["customlimitranges", "customlimitranges/*"]
+    sideEffects: None
+    timeoutSeconds: 15
+    failurePolicy: Fail
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: MutatingWebhookConfiguration
+metadata:
+  name: mutating-webhook-configuration
+  namespace: {{ .Release.Namespace | quote }}
+  labels:
+    app: mutating-webhook-configuration
+  annotations:
+    cert-manager.io/inject-ca-from:  {{ .Release.Namespace }}/{{ include "kubeservice-custom-limitrange.fullname" . }}-certificate
+webhooks:
+  - name: mutating-{{ include "kubeservice-custom-limitrange.fullname" . }}-svc.{{ .Release.Namespace }}.svc
+    admissionReviewVersions: ["v1","v1beta1"]
+    clientConfig:
+      service:
+        name: {{ include "kubeservice-custom-limitrange.fullname" . }}-svc
+        namespace: {{ .Release.Namespace | quote }}
+        path: /mutate-custom-cmss-com-v1-customlimitrange
+        port: 443
+    rules:
+      - operations: ["CREATE", "UPDATE"]
+        apiGroups: ["custom.cmss.com"]
+        apiVersions: ["v1"]
+        resources: ["customlimitranges", "customlimitranges/*"]
+    sideEffects: None
+    timeoutSeconds: 15
+    reinvocationPolicy: Never
+    failurePolicy: Fail
