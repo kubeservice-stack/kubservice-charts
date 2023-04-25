@@ -3,7 +3,7 @@ entries:
   kubeservice-custom-limitrange:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-04-11T11:21:42.60748+08:00"
+    created: "2023-04-25T23:26:50.786675+08:00"
     description: A Helm chart for Kubernetes
     digest: bec4c33446dc450aafd7c7ac6ea3a9da3c08363744b2ad5a2101c22aa04ef551
     home: https://github.com/kubeservice-stack/custom-limit-range
@@ -22,8 +22,30 @@ entries:
     version: 1.0.0
   kubeservice-ebpf-exporter:
   - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2023-04-25T23:26:50.787862+08:00"
+    description: A Helm chart for ebpf_exporter
+    digest: 048e929206030ea44c6321a4927e940b55e8f4945d5272f40980a031298d0666
+    home: https://github.com/kubeservice-stack/kubservice-charts
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - metric
+    - prometheus
+    - kubernetes
+    - ebpf
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-ebpf-exporter
+    sources:
+    - https://github.com/kubeservice-stack/ebpf_exporter
+    type: application
+    urls:
+    - https://kubeservice-stack.github.io/kubservice-charts/kubeservice-ebpf-exporter-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-04-11T11:21:42.607895+08:00"
+    created: "2023-04-25T23:26:50.787285+08:00"
     description: A Helm chart for ebpf_exporter
     digest: 1232f77623fdd986d24d363841c8533d9215277870a4cfa0c085a6cc4c333df3
     home: https://github.com/kubeservice-stack/kubservice-charts
@@ -46,7 +68,7 @@ entries:
   kubeservice-lxcfs-webhook:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-04-11T11:21:42.608298+08:00"
+    created: "2023-04-25T23:26:50.7883+08:00"
     description: A Kubernetes Admission Webhook for Linux Container Resources View.
     digest: bed679b7bf72456d251c2c2b22f0f72090c6089310c53492d41d67f56eb4e9b2
     home: https://github.com/kubeservice-stack/lxcfs-webhook
@@ -68,7 +90,7 @@ entries:
   prometheus-pingmesh-exporter:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2023-04-11T11:21:42.610078+08:00"
+    created: "2023-04-25T23:26:50.792741+08:00"
     description: Prometheus Pingmesh Exporter
     digest: f4a2aa1525ca38a532ad0c18cee398e18ce04d2271891aecf46d1de44f8db494
     home: https://github.com/kubeservice-stack/pingmesh-agent
@@ -89,7 +111,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 0.22.0
-    created: "2023-04-11T11:21:42.609213+08:00"
+    created: "2023-04-25T23:26:50.79171+08:00"
     description: Prometheus Pingmesh Exporter
     digest: 5be1ae6f8481484e82e36e112b14b804eb7591af6222f464f33304f5338cbe25
     home: https://github.com/kubeservice-stack/pingmesh-agent
@@ -107,4 +129,4 @@ entries:
     urls:
     - https://kubeservice-stack.github.io/kubservice-charts/prometheus-pingmesh-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-11T11:21:42.606719+08:00"
+generated: "2023-04-25T23:26:50.785616+08:00"
