@@ -26,7 +26,7 @@ image:
   # Docker image registry.
   registry: docker.io
   # Docker image repository.
-  repository: dongjiang1989/ebpf-exporter-amd64
+  repository: dongjiang1989/ebpf-exporter
   # Docker image tag.
   tag: latest
 
@@ -94,7 +94,8 @@ serviceAccount:
 prometheus:
   monitor:
     enabled: true
-    additionalLabels: {}
+    additionalLabels: 
+      release: metrics
     namespace: ""
 
     jobLabel: ""
@@ -113,7 +114,11 @@ prometheus:
     selectorOverride: {}
 
     relabelings: []
-    metricRelabelings: []
+
+    metricRelabelings:
+    - sourceLabels: [__meta_kubernetes_node_name]
+      action: replace
+      targetLabel: node_name
     interval: ""
     scrapeTimeout: 10s
     ## prometheus.monitor.apiVersion ApiVersion for the serviceMonitor Resource(defaults to "monitoring.coreos.com/v1")
