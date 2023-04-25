@@ -12,7 +12,7 @@ args:
   - --web.listen-address
   - 0.0.0.0:9435
   - --config.names
-  - timers,uprobe,usdt,shrinklat,oomkill,biolatency,accept-latency,bpf-jit,cachestat,cgroup,llcstat,raw-tracepoints,tcp-syn-backlog,tcp-window-clamps
+  - timers,uprobe,usdt,shrinklat,biolatency,accept-latency,bpf-jit,cachestat,cgroup,llcstat,raw-tracepoints,tcp-syn-backlog,tcp-window-clamps
 
 # Extra volumeMounts.
 extraVolumeMounts: []
