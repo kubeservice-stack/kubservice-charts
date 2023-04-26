@@ -113,12 +113,14 @@ prometheus:
     ##
     selectorOverride: {}
 
-    relabelings: []
+    relabelings: 
+    relabelings:
+    - sourceLabels: [__meta_kubernetes_pod_node_name]
+      targetLabel: hostname
+      regex: (.*)
+      replacement: $1
 
-    metricRelabelings:
-    - sourceLabels: [__meta_kubernetes_node_name]
-      action: replace
-      targetLabel: node_name
+    metricRelabelings: []
     interval: ""
     scrapeTimeout: 10s
     ## prometheus.monitor.apiVersion ApiVersion for the serviceMonitor Resource(defaults to "monitoring.coreos.com/v1")
