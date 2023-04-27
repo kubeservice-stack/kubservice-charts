@@ -3,7 +3,7 @@ entries:
   kubeservice-custom-limitrange:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-04-27T10:49:41.479834+08:00"
+    created: "2023-04-27T12:39:03.353576+08:00"
     description: A Helm chart for Kubernetes
     digest: bec4c33446dc450aafd7c7ac6ea3a9da3c08363744b2ad5a2101c22aa04ef551
     home: https://github.com/kubeservice-stack/custom-limit-range
@@ -23,7 +23,7 @@ entries:
   kubeservice-ebpf-exporter:
   - apiVersion: v2
     appVersion: 1.0.2
-    created: "2023-04-27T10:49:41.481174+08:00"
+    created: "2023-04-27T12:39:03.354966+08:00"
     description: A Helm chart for ebpf_exporter
     digest: 864d9a0d15401a5b654e1c6e20aa98dc271672e19c50fbe1538b945922f65c73
     home: https://github.com/kubeservice-stack/kubservice-charts
@@ -45,7 +45,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2023-04-27T10:49:41.480659+08:00"
+    created: "2023-04-27T12:39:03.354414+08:00"
     description: A Helm chart for ebpf_exporter
     digest: 048e929206030ea44c6321a4927e940b55e8f4945d5272f40980a031298d0666
     home: https://github.com/kubeservice-stack/kubservice-charts
@@ -67,7 +67,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-04-27T10:49:41.480255+08:00"
+    created: "2023-04-27T12:39:03.353982+08:00"
     description: A Helm chart for ebpf_exporter
     digest: 1232f77623fdd986d24d363841c8533d9215277870a4cfa0c085a6cc4c333df3
     home: https://github.com/kubeservice-stack/kubservice-charts
@@ -90,7 +90,7 @@ entries:
   kubeservice-lxcfs-webhook:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-04-27T10:49:41.481543+08:00"
+    created: "2023-04-27T12:39:03.355275+08:00"
     description: A Kubernetes Admission Webhook for Linux Container Resources View.
     digest: bed679b7bf72456d251c2c2b22f0f72090c6089310c53492d41d67f56eb4e9b2
     home: https://github.com/kubeservice-stack/lxcfs-webhook
@@ -109,10 +109,34 @@ entries:
     urls:
     - https://kubeservice-stack.github.io/kubservice-charts/kubeservice-lxcfs-webhook-1.0.0.tgz
     version: 1.0.0
+  kubeservice-namespace-node-affinity:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-04-27T12:39:03.355725+08:00"
+    description: A Helm chart for Kubernetes
+    digest: c083d68c73ddb6d4cd8397938dcf9560a28037131e4528f58786c9a8effb2fbc
+    home: https://github.com/kubeservice-stack/namespace-node-affinity
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - admission webhook
+    - affintiy
+    - namespace
+    - node
+    - resource views
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-namespace-node-affinity
+    sources:
+    - https://github.com/kubeservice-stack/namespace-node-affinity
+    type: application
+    urls:
+    - https://kubeservice-stack.github.io/kubservice-charts/kubeservice-namespace-node-affinity-1.0.0.tgz
+    version: 1.0.0
   prometheus-pingmesh-exporter:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2023-04-27T10:49:41.485426+08:00"
+    created: "2023-04-27T12:39:03.35746+08:00"
     description: Prometheus Pingmesh Exporter
     digest: f4a2aa1525ca38a532ad0c18cee398e18ce04d2271891aecf46d1de44f8db494
     home: https://github.com/kubeservice-stack/pingmesh-agent
@@ -133,7 +157,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 0.22.0
-    created: "2023-04-27T10:49:41.484585+08:00"
+    created: "2023-04-27T12:39:03.356459+08:00"
     description: Prometheus Pingmesh Exporter
     digest: 5be1ae6f8481484e82e36e112b14b804eb7591af6222f464f33304f5338cbe25
     home: https://github.com/kubeservice-stack/pingmesh-agent
@@ -151,4 +175,4 @@ entries:
     urls:
     - https://kubeservice-stack.github.io/kubservice-charts/prometheus-pingmesh-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-27T10:49:41.479026+08:00"
+generated: "2023-04-27T12:39:03.352613+08:00"
