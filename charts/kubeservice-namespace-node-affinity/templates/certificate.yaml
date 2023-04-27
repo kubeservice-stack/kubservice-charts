@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: '{{ include "kubeservice-namespace-node-affinity.fullname" . }}-certificate'
+  namespace: {{ .Release.Namespace | quote }}
+spec:
+  dnsNames:
+  - '{{ include "kubeservice-namespace-node-affinity.fullname" . }}-svc.{{ .Release.Namespace }}.svc'
+  - '{{ include "kubeservice-namespace-node-affinity.fullname" . }}-svc.{{ .Release.Namespace }}.svc.cluster.local'
+  issuerRef:
+    kind: Issuer
+    name: '{{ include "kubeservice-namespace-node-affinity.fullname" . }}-selfsigned-issuer'
+  secretName: '{{ include "kubeservice-namespace-node-affinity.fullname" . }}-certificate'
