@@ -69,7 +69,7 @@ See [kubeservice-stack/ebpf_exporter/README.md](https://github.com/kubeservice-s
 
 Parameter | Description | Default
 --------- | ----------- | -------
-`image.repository` | image repository | `dongjiang1989/ebpf-exporter-amd64`
+`image.repository` | image repository | `dongjiang1989/ebpf-exporter`
 `image.tag` | image tag | `latest`
 `image.pullPolicy` |  image pull policy | `IfNotPresent`
 `service.type` | service type | `ClusterIP`
