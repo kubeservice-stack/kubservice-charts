@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "kubeservice-namespace-node-affinity.fullname" . }}
+  namespace: {{ .Release.Namespace | quote }}
+  labels:
+    {{- include "kubeservice-namespace-node-affinity.labels" . | nindent 4 }}
+spec:
+  publishNotReadyAddresses: true
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "kubeservice-namespace-node-affinity.selectorLabels" . | nindent 4 }}

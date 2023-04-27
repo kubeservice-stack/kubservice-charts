@@ -1,0 +1,31 @@
+apiVersion: admissionregistration.k8s.io/v1
+kind: MutatingWebhookConfiguration
+metadata:
+  name: mutating-lxcfs-admission-webhook-cfg
+  namespace: {{ .Release.Namespace | quote }}
+  labels:
+    app: lxcfs-admission-webhook
+  annotations:
+    cert-manager.io/inject-ca-from: {{ .Release.Namespace }}/{{ include "kubeservice-namespace-node-affinity.fullname" . }}-certificate
+webhooks:
+  - name: '{{ include "kubeservice-namespace-node-affinity.fullname" . }}-svc.{{ .Release.Namespace }}.svc'
+    clientConfig:
+      service:
+        name: {{ include "kubeservice-namespace-node-affinity.fullname" . }}
+        namespace: {{ .Release.Namespace | quote }}
+        path: "/node/affinity"
+        port: 443
+    rules:
+      - operations: ["CREATE"]
+        apiGroups: [""]
+        apiVersions: ["v1"]
+        resources: ["pods"]
+        scope:       "Namespaced"
+    admissionReviewVersions: ["v1","v1beta1"]
+    sideEffects: None
+    timeoutSeconds: 5
+    reinvocationPolicy: Never
+    failurePolicy: Ignore
+    namespaceSelector:
+      matchLabels:
+        namespace-node-affinity: enabled
