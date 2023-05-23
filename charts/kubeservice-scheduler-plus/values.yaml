@@ -1,0 +1,42 @@
+# Default values for scheduler.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+scheduler:
+  enable: true
+  name: kubeservice-scheduler
+  image:
+    repository: docker.io/dongjiang1989/crane-scheduler
+    tag: main
+  replicaCount: 1
+
+controller:
+  enable: true
+  name: kubeservice-scheduler-controller
+  image:
+    repository: docker.io/dongjiang1989/crane-scheduler-controller
+    tag: main
+  replicaCount: 3
+  livenessProbe:
+    failureThreshold: 3
+    httpGet:
+      path: /healthz
+      port: 8090
+      scheme: HTTP
+    initialDelaySeconds: 15
+    periodSeconds: 10
+  readinessProbe:
+    httpGet:
+      path: /healthz
+      port: 8090
+      scheme: HTTP
+
+nodemetrics:
+  enable: true
+  name: kubeservice-node-metrics
+  image:
+    repository: docker.io/dongjiang1989/node-metrics
+    tag: latest
+
+global:
+  port: 19101

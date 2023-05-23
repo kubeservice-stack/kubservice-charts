@@ -1,0 +1,57 @@
+{{- if .Values.controller.enable }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: kubeservice-scheduler-controller
+  name: {{ .Values.controller.name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: {{ .Values.controller.replicaCount }}
+  selector:
+    matchLabels:
+      app: kubeservice-scheduler-controller
+  template:
+    metadata:
+      labels:
+        app: kubeservice-scheduler-controller
+    spec:
+      serviceAccountName: kubeservice-scheduler-controller
+      containers:
+        - name: {{ .Values.controller.name }}
+          env:
+            - name: TZ
+              value: Asia/Shanghai
+            - name: CRANE_SYSTEM_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          command:
+            - /controller
+            - --policy-config-path=/data/policy.yaml
+            - --port={{ .Values.global.port }}
+          image:  "{{ .Values.controller.image.repository }}:{{ .Values.controller.image.tag }}"
+          imagePullPolicy: IfNotPresent
+          {{- with .Values.controller.livenessProbe }}
+          livenessProbe:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.controller.readinessProbe }}
+          readinessProbe:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          volumeMounts:
+            - mountPath: /data
+              name: dynamic-scheduler-policy
+          resources:
+            requests:
+              cpu: 200m
+              memory: 200Mi
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+        - configMap:
+            defaultMode: 420
+            name: dynamic-scheduler-policy
+          name: dynamic-scheduler-policy
+{{- end }}

@@ -1,0 +1,43 @@
+{{- if .Values.nodemetrics.enable }}
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  labels:
+    app: kubeservice-node-metrics
+  name: {{ .Values.nodemetrics.name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  selector:
+    matchLabels:
+      app: kubeservice-node-metrics
+  template:
+    metadata:
+      labels:
+        app: kubeservice-node-metrics
+    spec:
+      containers:
+      - image:  "{{ .Values.nodemetrics.image.repository }}:{{ .Values.nodemetrics.image.tag }}"
+        imagePullPolicy: IfNotPresent
+        name: {{ .Values.nodemetrics.name }}
+        env:
+          - name: TZ
+            value: Asia/Shanghai
+          - name: CRANE_SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+        args:
+        - --web.listen-address=0.0.0.0:{{ .Values.global.port }}
+        resources:
+          limits:
+            cpu: 102m
+            memory: 180Mi
+          requests:
+            cpu: 102m
+            memory: 180Mi
+      hostNetwork: true
+      hostPID: true
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/master
+{{- end }}

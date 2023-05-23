@@ -1,0 +1,38 @@
+apiVersion: v2
+name: kubeservice-scheduler-plus
+description: deploy node-metrics, kubeservice-scheduler and kubeservice-scheduler-controller
+
+# A chart can be either an 'application' or a 'library' chart.
+#
+# Application charts are a collection of templates that can be packaged into versioned archives
+# to be deployed.
+#
+# Library charts provide useful utilities or functions for the chart developer. They're included as
+# a dependency of application charts to inject those utilities and functions into the rendering
+# pipeline. Library charts do not define any templates and therefore cannot be deployed.
+type: application
+
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates, including the app version.
+# Versions are expected to follow Semantic Versioning (https://semver.org/)
+version: 0.1.0
+
+# This is the version number of the application being deployed. This version number should be
+# incremented each time you make changes to the application. Versions are not expected to
+# follow Semantic Versioning. They should reflect the version the application is using.
+# It is recommended to use it with quotes.
+appVersion: "1.0.0"
+
+home: https://stack.kubeservice.cn/docs/%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/k8s-crane-plus-schduler/
+icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+keywords:
+- Real resource
+- Scheduler
+- Controller
+- Node Metrics
+maintainers:
+- email: dongjiang1989@126.com
+  name: dongjiang
+sources:
+- https://github.com/kubeservice-stack/crane-scheduler
+- https://github.com/kubeservice-stack/node-metrics

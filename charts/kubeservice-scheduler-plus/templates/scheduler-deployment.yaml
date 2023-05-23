@@ -1,0 +1,60 @@
+{{- if .Values.scheduler.enable }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    component: kubeservice-scheduler
+  name: {{ .Values.scheduler.name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: {{ .Values.scheduler.replicaCount }}
+  selector:
+    matchLabels:
+      component: kubeservice-scheduler
+  replicas: {{ .Values.scheduler.replicaCount }}
+  template:
+    metadata:
+      labels:
+        component: kubeservice-scheduler
+    spec:
+      serviceAccountName: kubeservice-scheduler
+      containers:
+      - command:
+        - /scheduler
+        - --leader-elect=false
+        - --config=/etc/kubernetes/kube-scheduler/scheduler-config.yaml
+        image: "{{ .Values.scheduler.image.repository }}:{{ .Values.scheduler.image.tag}}"
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 10259
+            scheme: HTTPS
+          initialDelaySeconds: 15
+        name: {{ .Values.scheduler.name }}
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 10259
+            scheme: HTTPS
+        resources:
+          requests:
+            cpu: '0.2'
+        securityContext:
+          privileged: false
+        volumeMounts:
+        - name: scheduler-config
+          mountPath: /etc/kubernetes/kube-scheduler
+          readOnly: true
+        - name: dynamic-scheduler-policy
+          mountPath: /etc/kubernetes
+          readOnly: true
+      hostNetwork: false
+      hostPID: false
+      volumes:
+      - name: scheduler-config
+        configMap:
+          name: scheduler-config
+      - name: dynamic-scheduler-policy
+        configMap:
+          name: dynamic-scheduler-policy
+{{- end }}
