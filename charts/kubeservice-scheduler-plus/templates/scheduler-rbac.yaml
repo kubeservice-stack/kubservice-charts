@@ -1,4 +1,4 @@
-{{ if .Values.scheduler.enable }}
+{{- if .Values.scheduler.enable }}
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
@@ -160,4 +160,4 @@ subjects:
 - kind: ServiceAccount
   name: kubeservice-scheduler
   namespace: {{ .Release.Namespace }}
-{{ end }}
+{{- end }}

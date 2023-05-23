@@ -85,7 +85,7 @@ The following table lists the configurable parameters of the Crane-scheduler cha
 | `controller.image.repository`                              | Image name of Scheduler-controller.  | `docker.io/dongjiang1989/crane-scheduler-controller` |
 | `controller.image.tag`                                     | Image tag of Scheduler-controller. Optional, given app version of Helm chart is used by default | `main` |
 | `controller.replicaCount`                                  | Replica count of Scheduler-controller | `3` |
-| `node-metrics.enable`                                      | Whether to deploy node metrics                   | true                |
-| `node-metrics.image.repository`                            | Image name of node metrics.  | `docker.io/dongjiang1989/node-metrics` |
-| `node-metrics.image.tag`                                   | Image tag of node metrics. Optional, given app version of Helm chart is used by default | `latest` |
+| `nodemetrics.enable`                                      | Whether to deploy node metrics                   | true                |
+| `nodemetrics.image.repository`                            | Image name of node metrics.  | `docker.io/dongjiang1989/node-metrics` |
+| `nodemetrics.image.tag`                                   | Image tag of node metrics. Optional, given app version of Helm chart is used by default | `latest` |
 | `global.port`                                              | node metrics port | `19101` |

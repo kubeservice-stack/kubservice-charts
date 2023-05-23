@@ -1,6 +1,6 @@
 apiVersion: v2
 name: kubeservice-scheduler-plus
-description: deploy crane-scheduler and controller
+description: deploy node-metrics, kubeservice-scheduler and kubeservice-scheduler-controller
 
 # A chart can be either an 'application' or a 'library' chart.
 #

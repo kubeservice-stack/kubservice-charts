@@ -1,4 +1,4 @@
-{{ if .Values.scheduler.enable }}
+{{- if .Values.scheduler.enable }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -28,4 +28,4 @@ data:
       - name: Dynamic
         args:
           policyConfigPath: /etc/kubernetes/policy.yaml
-{{ end }}
+{{- end }}

@@ -1,10 +1,10 @@
-{{ if .Values.node-metrics.enable }}
+{{- if .Values.nodemetrics.enable }}
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   labels:
     app: kubeservice-node-metrics
-  name: {{ .Values.node-metrics.name }}
+  name: {{ .Values.nodemetrics.name }}
   namespace: {{ .Release.Namespace }}
 spec:
   selector:
@@ -16,8 +16,9 @@ spec:
         app: kubeservice-node-metrics
     spec:
       containers:
-      - image: dongjiang1989/node-metrics:latest
-        name: {{ .Values.node-metrics.name }}
+      - image:  "{{ .Values.nodemetrics.image.repository }}:{{ .Values.nodemetrics.image.tag }}"
+        imagePullPolicy: IfNotPresent
+        name: {{ .Values.nodemetrics.name }}
         env:
           - name: TZ
             value: Asia/Shanghai
@@ -39,4 +40,4 @@ spec:
       tolerations:
       - effect: NoSchedule
         key: node-role.kubernetes.io/master
-{{ end }}
+{{- end }}

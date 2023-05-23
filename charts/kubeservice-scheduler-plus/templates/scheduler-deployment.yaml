@@ -1,4 +1,4 @@
-{{ if .Values.scheduler.enable }}
+{{- if .Values.scheduler.enable }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -7,6 +7,7 @@ metadata:
   name: {{ .Values.scheduler.name }}
   namespace: {{ .Release.Namespace }}
 spec:
+  replicas: {{ .Values.scheduler.replicaCount }}
   selector:
     matchLabels:
       component: kubeservice-scheduler
@@ -56,4 +57,4 @@ spec:
       - name: dynamic-scheduler-policy
         configMap:
           name: dynamic-scheduler-policy
-{{ end }}
+{{- end }}

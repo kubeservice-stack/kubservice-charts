@@ -31,9 +31,9 @@ controller:
       port: 8090
       scheme: HTTP
 
-node-metrics:
+nodemetrics:
   enable: true
-  name: kubeservice-scheduler-controller
+  name: kubeservice-node-metrics
   image:
     repository: docker.io/dongjiang1989/node-metrics
     tag: latest
