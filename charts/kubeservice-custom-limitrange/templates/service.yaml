@@ -6,6 +6,11 @@ metadata:
   labels:
     {{- include "kubeservice-custom-limitrange.labels" . | nindent 4 }}
 spec:
+{{- if ge (.Capabilities.KubeVersion.Minor | int) 20 }}
+  ipFamilies:
+{{ toYaml .Values.service.ipFamilies | indent 2 }}
+  ipFamilyPolicy: {{ .Values.service.ipFamilyPolicy }}
+{{- end }}
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}

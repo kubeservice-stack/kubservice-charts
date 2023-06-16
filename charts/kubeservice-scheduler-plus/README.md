@@ -1,5 +1,4 @@
 # kubeservice-scheduler-plus
-## TL;DR
 
 [Kubeservice scheduler Plus](https://github.com/kubeservice-stack/crane-scheduler) is a Kubernetes scheduler which can schedule pod based on actual node load. `Independent of Prometheus`
 

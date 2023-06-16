@@ -6,6 +6,11 @@ metadata:
   labels:
     {{- include "kubeservice-lxcfs-webhook.selectorLabels" . | nindent 4 }}
 spec:
+{{- if ge (.Capabilities.KubeVersion.Minor | int) 20 }}
+  ipFamilies:
+{{ toYaml .Values.service.ipFamilies | indent 2 }}
+  ipFamilyPolicy: {{ .Values.service.ipFamilyPolicy }}
+{{- end }}
   publishNotReadyAddresses: true
   ports:
   - port: 443
