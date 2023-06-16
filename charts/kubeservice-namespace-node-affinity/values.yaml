@@ -54,6 +54,9 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 443
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
 
 ingress:
   enabled: false
