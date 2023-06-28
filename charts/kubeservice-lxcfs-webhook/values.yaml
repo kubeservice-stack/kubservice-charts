@@ -5,6 +5,7 @@
 # defined by either the name or alias of your dependency in Chart.yaml
 cert-manager:
   namespace: security
+  installCRDs: true
 
 replicaCount: 1
 
