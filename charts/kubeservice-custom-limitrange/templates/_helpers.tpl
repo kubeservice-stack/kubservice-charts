@@ -39,6 +39,7 @@ helm.sh/chart: {{ include "kubeservice-custom-limitrange.chart" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
+app.kubernetes.io/managed-by: Helm
 {{- end }}
 
 {{/*
