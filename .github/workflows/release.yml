@@ -52,6 +52,7 @@ jobs:
           git push origin gh-pages
           for i in `ls -r charts`
           do
+            helm dependency build charts/${i} 
             helm package charts/${i}
           done
           helm repo index . --url https://kubeservice-stack.github.io/kubservice-charts/
