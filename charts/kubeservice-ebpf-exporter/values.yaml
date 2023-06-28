@@ -96,7 +96,7 @@ serviceAccount:
 
 prometheus:
   monitor:
-    enabled: true
+    enabled: false
     additionalLabels:
       release: metrics
     namespace: ""
