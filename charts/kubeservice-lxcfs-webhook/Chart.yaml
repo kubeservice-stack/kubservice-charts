@@ -36,10 +36,9 @@ sources:
 - https://github.com/kubeservice-stack/lxcfs-webhook
 dependencies:
   - name: cert-manager
-    version: v1.4.3
+    version: v1.12.0
     repository: https://charts.jetstack.io
     alias: cert-manager
-    condition: cert-manager.enabled
 annotations:
   artifacthub.io/signKey: |
     fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
