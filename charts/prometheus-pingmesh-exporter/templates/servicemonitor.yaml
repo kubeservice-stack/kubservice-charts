@@ -5,7 +5,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: {{ template "prometheus-pingmesh-exporter.fullname" $ }}-{{ .name }}
-  namespace: {{ template "prometheus-pingmesh-exporter.namespace" $ }}
+  namespace: {{ .Release.Namespace | quote }}
   labels:
     {{- include "prometheus-pingmesh-exporter.labels" $ | nindent 4 }}
     {{- if or $.Values.serviceMonitor.defaults.labels .labels }}
