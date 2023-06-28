@@ -32,3 +32,10 @@ keywords:
 maintainers:
 - email: dongjiang1989@126.com
   name: dongjiang
+annotations:
+  artifacthub.io/signKey: |
+    fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+    url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+  artifacthub.io/maintainers: |
+    - name: dongjiang
+      email: dongjiang1989@126.com 
