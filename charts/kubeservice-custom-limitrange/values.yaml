@@ -4,6 +4,7 @@
 
 # defined by either the name or alias of your dependency in Chart.yaml
 cert-manager:
+  enabled: true
   installCRDs: true
 
 replicaCount: 2
