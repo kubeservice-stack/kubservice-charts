@@ -4,7 +4,7 @@ affinity: {}
 # Path to ebpf_exporter.
 command:
   - /ebpf_exporter
-  
+
 # Args to pass to ebpf_exporter.
 args:
   - --config.dir
@@ -93,11 +93,11 @@ serviceAccount:
   annotations: {}
   imagePullSecrets: []
   automountServiceAccountToken: false
-    
+
 prometheus:
   monitor:
-    enabled: true
-    additionalLabels: 
+    enabled: false
+    additionalLabels:
       release: metrics
     namespace: ""
 

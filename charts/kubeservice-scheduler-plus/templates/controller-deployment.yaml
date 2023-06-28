@@ -3,18 +3,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: kubeservice-scheduler-controller
+    {{- include "kubeservice-scheduler-plus.labels" . | nindent 4 }}
   name: {{ .Values.controller.name }}
   namespace: {{ .Release.Namespace }}
 spec:
   replicas: {{ .Values.controller.replicaCount }}
   selector:
     matchLabels:
-      app: kubeservice-scheduler-controller
+      {{- include "kubeservice-scheduler-plus.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        app: kubeservice-scheduler-controller
+        {{- include "kubeservice-scheduler-plus.selectorLabels" . | nindent 8 }}
     spec:
       serviceAccountName: kubeservice-scheduler-controller
       containers:

@@ -2,6 +2,11 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+# defined by either the name or alias of your dependency in Chart.yaml
+cert-manager:
+  enabled: true
+  installCRDs: true
+
 replicaCount: 1
 
 lxcfs:
@@ -16,10 +21,9 @@ webhook:
     pullPolicy: Always
     # Overrides the image tag whose default is the chart appVersion.
     tag: "latest"
-  
 
 imagePullSecrets: []
-nameOverride: "kube-system"
+nameOverride: ""
 fullnameOverride: ""
 
 serviceAccount:
@@ -50,7 +54,7 @@ service:
   ipFamilies:
   - IPv4
   ipFamilyPolicy: SingleStack
-  
+
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little

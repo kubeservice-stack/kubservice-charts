@@ -1,0 +1,13 @@
+# See https://github.com/helm/chart-testing#configuration
+remote: origin
+target-branch: master
+chart-dirs:
+  - charts
+chart-repos:
+  - jetstack=https://charts.jetstack.io
+helm-extra-args: --timeout 600s
+excluded-charts:
+  # If not running on GCE, will error: "Failed to get GCE config"
+  - kubeservice-lxcfs-webhook
+additional-commands:
+  # - helm unittest --helm3 --strict --file unittests/*.yaml --file 'unittests/**/*.yaml' {{ .Path }}

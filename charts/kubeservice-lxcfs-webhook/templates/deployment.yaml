@@ -4,6 +4,9 @@ metadata:
   name: kubeservice-lxcfs-webhook
   labels:
     {{- include "kubeservice-lxcfs-webhook.labels" . | nindent 4 }}
+  annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-weight: "2"
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -47,6 +50,15 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+          - mountPath: /etc/webhook/certs/
+            name: cert
+            readOnly: true
+      volumes:
+      - name: cert
+        secret:
+          defaultMode: 420
+          secretName: {{ include "kubeservice-lxcfs-webhook.fullname" . }}-certificate
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

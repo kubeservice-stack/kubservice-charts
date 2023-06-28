@@ -16,7 +16,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
-  namespace: {{ template "prometheus-pingmesh-exporter.namespace" . }}
+  namespace: {{ .Release.Namespace | quote }}
   labels:
     {{- include "prometheus-pingmesh-exporter.labels" . | nindent 4 }}
     {{- if .Values.ingress.labels }}
