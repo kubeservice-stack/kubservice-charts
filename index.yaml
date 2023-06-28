@@ -1,6 +1,38 @@
 apiVersion: v1
 entries:
   kubeservice-custom-limitrange:
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 1.16.1
+    created: "2023-06-28T18:26:41.87763854Z"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.11.4
+    description: A Helm chart for Kubernetes
+    digest: b40fa951c8b772442abe23985f7a122d9374d4ecb56159fae7d9a9e8d0618701
+    home: https://github.com/kubeservice-stack/custom-limit-range
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - admission webhook
+    - Limit Ranges
+    - Kubernetes
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-custom-limitrange
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-custom-limitrange-1.1.1/kubeservice-custom-limitrange-1.1.1.tgz
+    version: 1.1.1
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2023-06-16T16:35:59.03851+08:00"
@@ -40,6 +72,35 @@ entries:
     - https://kubeservice-stack.github.io/kubservice-charts/kubeservice-custom-limitrange-1.0.0.tgz
     version: 1.0.0
   kubeservice-ebpf-exporter:
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 1.1.1
+    created: "2023-06-28T18:26:42.036043002Z"
+    description: A Helm chart for ebpf_exporter
+    digest: a0d24a13415e47464494756f364f2e01d3aaad6a9a52e69a3c45e51636f029da
+    home: https://github.com/kubeservice-stack/kubservice-charts
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - metric
+    - prometheus
+    - kubernetes
+    - ebpf
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-ebpf-exporter
+    sources:
+    - https://github.com/kubeservice-stack/ebpf_exporter
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-ebpf-exporter-1.1.1/kubeservice-ebpf-exporter-1.1.1.tgz
+    version: 1.1.1
   - apiVersion: v2
     appVersion: 1.1.0
     created: "2023-06-16T16:35:59.040288+08:00"
@@ -129,6 +190,40 @@ entries:
     - https://kubeservice-stack.github.io/kubservice-charts/kubeservice-ebpf-exporter-1.0.0.tgz
     version: 1.0.0
   kubeservice-lxcfs-webhook:
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 1.0.1
+    created: "2023-06-28T18:26:42.208695592Z"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.11.4
+    description: A Kubernetes Admission Webhook for Linux Container Resources View.
+    digest: 21414f5c25357c20f418716de7b529aa77ab121b73ed3b9ffc8c0b112d2a968f
+    home: https://github.com/kubeservice-stack/lxcfs-webhook
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - admission webhook
+    - lxcfs
+    - resource views
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-lxcfs-webhook
+    sources:
+    - https://github.com/kubeservice-stack/lxcfs-webhook
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-lxcfs-webhook-1.1.1/kubeservice-lxcfs-webhook-1.1.1.tgz
+    version: 1.1.1
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2023-06-16T16:35:59.040967+08:00"
@@ -172,6 +267,42 @@ entries:
     - https://kubeservice-stack.github.io/kubservice-charts/kubeservice-lxcfs-webhook-1.0.0.tgz
     version: 1.0.0
   kubeservice-namespace-node-affinity:
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 1.0.1
+    created: "2023-06-28T18:26:42.384510056Z"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.11.4
+    description: A Helm chart for Kubernetes
+    digest: 5705128059711f8c614ba407e3ba8bcf65e78dd685c61fb3958766ac808c6a85
+    home: https://github.com/kubeservice-stack/namespace-node-affinity
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - admission webhook
+    - affintiy
+    - namespace
+    - node
+    - resource views
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-namespace-node-affinity
+    sources:
+    - https://github.com/kubeservice-stack/namespace-node-affinity
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-namespace-node-affinity-1.1.1/kubeservice-namespace-node-affinity-1.1.1.tgz
+    version: 1.1.1
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2023-06-16T16:35:59.041783+08:00"
@@ -219,6 +350,36 @@ entries:
     - https://kubeservice-stack.github.io/kubservice-charts/kubeservice-namespace-node-affinity-1.0.0.tgz
     version: 1.0.0
   kubeservice-scheduler-plus:
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 1.0.1
+    created: "2023-06-28T18:26:42.565617842Z"
+    description: deploy node-metrics, kubeservice-scheduler and kubeservice-scheduler-controller
+    digest: 0814e14a2e7faa874a5e9e0410967baf394f09aa42044eaa0821483f2c47ff6e
+    home: https://stack.kubeservice.cn/docs/%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/k8s-crane-plus-schduler/
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - Real resource
+    - Scheduler
+    - Controller
+    - Node Metrics
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-scheduler-plus
+    sources:
+    - https://github.com/kubeservice-stack/crane-scheduler
+    - https://github.com/kubeservice-stack/node-metrics
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-scheduler-plus-0.1.1/kubeservice-scheduler-plus-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2023-06-16T16:35:59.042073+08:00"
@@ -243,6 +404,34 @@ entries:
     - https://kubeservice-stack.github.io/kubservice-charts/kubeservice-scheduler-plus-0.1.0.tgz
     version: 0.1.0
   prometheus-pingmesh-exporter:
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 1.1.1
+    created: "2023-06-28T18:26:42.736702496Z"
+    description: Prometheus Pingmesh Exporter
+    digest: a73a5fd17041a52f812bd295dd9b6184f8f4f1de9affda34cf3cfbad9daad707
+    home: https://github.com/kubeservice-stack/pingmesh-agent
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - prometheus
+    - pimgmesh
+    - monitoring
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: prometheus-pingmesh-exporter
+    sources:
+    - https://github.com/kubeservice-stack/pingmesh-agent
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/prometheus-pingmesh-exporter-1.1.1/prometheus-pingmesh-exporter-1.1.1.tgz
+    version: 1.1.1
   - apiVersion: v2
     appVersion: 1.1.0
     created: "2023-06-16T16:35:59.046113+08:00"
@@ -305,4 +494,4 @@ entries:
     urls:
     - https://kubeservice-stack.github.io/kubservice-charts/prometheus-pingmesh-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2023-06-16T16:35:59.037329+08:00"
+generated: "2023-06-28T18:26:42.736783198Z"
