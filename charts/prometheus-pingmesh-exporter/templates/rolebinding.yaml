@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "prometheus-pingmesh-exporter.labels" . | nindent 4 }}
   name: {{ template "prometheus-pingmesh-exporter.fullname" . }}
-  namespace: {{ template "prometheus-pingmesh-exporter.namespace" . }}
+  namespace: {{ .Release.Namespace | quote }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role

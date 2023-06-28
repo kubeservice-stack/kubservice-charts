@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ template "prometheus-pingmesh-exporter.fullname" . }}
-  namespace: {{ template "prometheus-pingmesh-exporter.namespace" . }}
+  namespace: {{ .Release.Namespace | quote }}
   labels:
     {{- include "prometheus-pingmesh-exporter.labels" . | nindent 4 }}
 spec:
