@@ -39,7 +39,14 @@ helm.sh/chart: {{ include "kubeservice-custom-limitrange.chart" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
-app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- end }}
+
+{{/*
+Common annotations
+*/}}
+{{- define "kubeservice-custom-limitrange.annotations" -}}
+meta.helm.sh/release-name: "{{ .Release.Name }}"
+meta.helm.sh/release-namespace: "{{ .Release.Namespace }}"
 {{- end }}
 
 {{/*
