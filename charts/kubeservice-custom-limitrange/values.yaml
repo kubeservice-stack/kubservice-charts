@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 cert-manager:
-  enabled : true
+  enabled: true
 
 replicaCount: 2
 
