@@ -320,7 +320,7 @@ serviceMonitor:
   ## https://github.com/coreos/prometheus-operator for pingmesh-exporter itself
   ##
   selfMonitor:
-    enabled: true
+    enabled: false
     additionalMetricsRelabels: {}
     additionalRelabeling: []
     labels: {}
