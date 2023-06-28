@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   labels:
-    app: kubeservice-node-metrics
+    {{- include "kubeservice-scheduler-plus.labels" . | nindent 4 }}
   name: {{ .Values.nodemetrics.name }}
   namespace: {{ .Release.Namespace }}
 spec:

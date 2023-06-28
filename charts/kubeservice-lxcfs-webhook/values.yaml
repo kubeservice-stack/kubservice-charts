@@ -21,7 +21,7 @@ webhook:
     tag: "latest"
 
 imagePullSecrets: []
-nameOverride: "kube-system"
+nameOverride: ""
 fullnameOverride: ""
 
 serviceAccount:
