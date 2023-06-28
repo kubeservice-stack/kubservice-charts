@@ -37,7 +37,6 @@ dependencies:
     version: v1.11.4
     repository: https://charts.jetstack.io
     alias: cert-manager
-    contain: true
 annotations:
   artifacthub.io/signKey: |
     fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
