@@ -110,3 +110,5 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+configMapData: {}
