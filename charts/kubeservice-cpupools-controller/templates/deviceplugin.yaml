@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  namespace: {{ .Release.Namespace | quote }}
+  name: {{ include "kubeservice-cpupools-controller.deviceplugin.serviceAccountName" . }}
+  labels:
+    {{- include "kubeservice-cpupools-controller.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      name: {{ include "kubeservice-cpupools-controller.deviceplugin.serviceAccountName" . }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        name: {{ include "kubeservice-cpupools-controller.deviceplugin.serviceAccountName" . }}
+    spec:
+      {- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: {{ include "kubeservice-cpupools-controller.deviceplugin.serviceAccountName" . }}
+          image: "{{ .Values.deviceplugin.image.repository }}:{{ .Values.deviceplugin.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: imagePullPolicy: {{ .Values.deviceplugin.image.pullPolicy }}
+          command: [ "/cpusets-device-plugin" ]
+          volumeMounts:
+            - mountPath: /etc/cpusets-pool
+              name: cpusets-configmaps
+            - mountPath: /var/lib/kubelet/device-plugins/ 
+              name: devicesock 
+             readOnly: false
+          env:
+          - name: NODE_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: spec.nodeName
+          - name: FILE_MATCH
+            value: "cpusets-*.yaml"
+          resources:
+            toYaml .Values.controller.resources | nindent 12 }}
+      volumes:
+      - name: devicesock 
+        hostPath:
+         # directory location on host
+         path: /var/lib/kubelet/device-plugins/
+      - name: cpusets-configmaps
+        configMap:
+          name: cpusets-configmaps
+      serviceAccountName:{{ include "kubeservice-cpupools-controller.deviceplugin.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
