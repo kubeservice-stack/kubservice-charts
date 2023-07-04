@@ -112,3 +112,21 @@ tolerations: []
 affinity: {}
 
 configMapData: {}
+  # cpuset-xxx-config.yaml: | #池化配置：必须以.yaml结尾的文件
+  #   pools:   # 将cpu可以分为 3类：exclusive、shared 和 default
+  #     exclusive:    # 对于 exclusive 可以继续进行分组
+  #       cpus : "15-23"   
+  #     exclusive_groupx:
+  #       cpus : "24-31"
+  #     exclusive_xxx:
+  #       cpus : "32-63"
+  #     shared:       # 对于 shared 可以继续进行分组
+  #       cpus : "4-7"
+  #     shared_groupx:
+  #       cpus : "8-11"
+  #     default:      # 对于 default 不能继续分组： default类似原生的cpu资源
+  #       cpus: "0-3"
+  #   nodeSelector:
+  #     name: xxxx
+  # xxxx.yaml : |
+  #   xxxx: xxxx
