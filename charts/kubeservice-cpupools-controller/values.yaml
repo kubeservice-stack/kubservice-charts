@@ -1,0 +1,132 @@
+# Default values for kubeservice-cpupools-controller.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+controller:
+  image:
+    repository: docker.io/dongjiang1989/cpusets-controller
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: ""
+
+  serviceAccount:
+    # Specifies whether a service account should be created
+    create: true
+    # Annotations to add to the service account
+    annotations: {}
+    # The name of the service account to use.
+    # If not set and create is true, a name is generated using the fullname template
+    name: "cpusets-controller"
+
+  podSecurityContext:
+    privileged: true
+
+  resources:
+    # We usually recommend not to specify default resources and to leave this as a conscious
+    # choice for the user. This also increases chances charts run on environments with little
+    # resources, such as Minikube. If you do want to specify resources, uncomment the following
+    # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+    # limits:
+    #   cpu: 100m
+    #   memory: 128Mi
+    requests:
+      cpu: 64m
+
+deviceplugin:
+  image:
+    repository: docker.io/dongjiang1989/cpusets-device-plugin
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: ""
+
+  serviceAccount:
+    # Specifies whether a service account should be created
+    create: true
+    # Annotations to add to the service account
+    annotations: {}
+    # The name of the service account to use.
+    # If not set and create is true, a name is generated using the fullname template
+    name: "cpusets-device-plugin"
+
+  podSecurityContext: {}
+  resources:
+    # We usually recommend not to specify default resources and to leave this as a conscious
+    # choice for the user. This also increases chances charts run on environments with little
+    # resources, such as Minikube. If you do want to specify resources, uncomment the following
+    # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+    # limits:
+    #   cpu: 100m
+    #   memory: 128Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+configMapData: {}
+  # cpuset-xxx-config.yaml: | # 池化配置：必须以.yaml结尾的文件
+  #   pools:   # 将cpu可以分为 3类：exclusive、shared 和 default
+  #     exclusive:    # 对于 exclusive 可以继续进行分组
+  #       cpus : "15-23"
+  #     exclusive_groupx:
+  #       cpus : "24-31"
+  #     exclusive_xxx:
+  #       cpus : "32-63"
+  #     shared:       # 对于 shared 可以继续进行分组
+  #       cpus : "4-7"
+  #     shared_groupx:
+  #       cpus : "8-11"
+  #     default:      # 对于 default 不能继续分组： default类似原生的cpu资源
+  #       cpus: "0-3"
+  #   nodeSelector:
+  #     name: xxxx
+  # xxxx.yaml : |
+  #   xxxx: xxxx

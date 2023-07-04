@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ include "kubeservice-cpupools-controller.deviceplugin.serviceAccountName" . }}
+subjects:
+- kind: ServiceAccount
+  name: {{ include "kubeservice-cpupools-controller.deviceplugin.serviceAccountName" . }}
+  namespace: {{ .Release.Namespace | quote }}
+roleRef:
+  kind: ClusterRole
+  name: {{ include "kubeservice-cpupools-controller.deviceplugin.serviceAccountName" . }}
+  apiGroup: rbac.authorization.k8s.io
