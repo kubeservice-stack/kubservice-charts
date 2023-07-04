@@ -1,5 +1,32 @@
 apiVersion: v1
 entries:
+  kubeservice-cpupools-controller:
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: v1.1.0
+    created: "2023-07-04T12:24:25.602378946Z"
+    description: A Helm chart cpuset pools to kubernetes node from https://github.com/kubeservice-stack/cpusets-controller
+    digest: f5c5164ccc93284a66d87f36c113a26d5dff8a547f3d531d28b98f1a6c44d585
+    home: https://github.com/kubeservice-stack/cpusets-controller
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - cpuset
+    - controller
+    - scheduling
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-cpupools-controller
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-cpupools-controller-0.1.0/kubeservice-cpupools-controller-0.1.0.tgz
+    version: 0.1.0
   kubeservice-custom-limitrange:
   - annotations:
       artifacthub.io/maintainers: |
@@ -494,4 +521,4 @@ entries:
     urls:
     - https://kubeservice-stack.github.io/kubservice-charts/prometheus-pingmesh-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2023-06-28T18:34:32.893022691Z"
+generated: "2023-07-04T12:24:25.602425553Z"
