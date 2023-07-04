@@ -26,14 +26,14 @@ spec:
       containers:
         - name: {{ include "kubeservice-cpupools-controller.deviceplugin.serviceAccountName" . }}
           image: "{{ .Values.deviceplugin.image.repository }}:{{ .Values.deviceplugin.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: imagePullPolicy: {{ .Values.deviceplugin.image.pullPolicy }}
+          imagePullPolicy: {{ .Values.deviceplugin.image.pullPolicy }}
           command: [ "/cpusets-device-plugin" ]
           volumeMounts:
             - mountPath: /etc/cpusets-pool
               name: cpusets-configmaps
             - mountPath: /var/lib/kubelet/device-plugins/ 
               name: devicesock 
-             readOnly: false
+              readOnly: false
           env:
           - name: NODE_NAME
             valueFrom:
@@ -51,6 +51,6 @@ spec:
       - name: cpusets-configmaps
         configMap:
           name: cpusets-configmaps
-      serviceAccountName:{{ include "kubeservice-cpupools-controller.deviceplugin.serviceAccountName" . }}
+      serviceAccountName: {{ include "kubeservice-cpupools-controller.deviceplugin.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}

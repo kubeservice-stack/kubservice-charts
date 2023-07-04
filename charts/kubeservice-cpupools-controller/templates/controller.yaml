@@ -26,7 +26,7 @@ spec:
       containers:
         - name: {{ include "kubeservice-cpupools-controller.controller.serviceAccountName" . }}
           image: "{{ .Values.controller.image.repository }}:{{ .Values.controller.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: imagePullPolicy: {{ .Values.controller.image.pullPolicy }}
+          imagePullPolicy: {{ .Values.controller.image.pullPolicy }}
           ## --cpusetroot needs to be set to the root of the cgroupfs hierarchy used by Kubelet for workloads
           command: [ "/cpusets-controller", "--poolconfigs=/etc/cpusets-pool", "--cpusetroot=/rootfs/sys/fs/cgroup/cpuset/kubepods/" ]
           resources:
@@ -37,12 +37,11 @@ spec:
               readOnly: true
             - mountPath: /etc/cpusets-pool
               name: cpusets-configmaps
-            ## -- do not mount kubepods under /sys to avoid circular linking
             - mountPath: /rootfs/sys/fs/cgroup/cpuset/kubepods/
               name: kubepods
             - mountPath: /var/lib/kubelet/device-plugins/
-             name: checkpointfile
-             readOnly: true
+              name: checkpointfile
+              readOnly: true
           env:
           - name: NODE_NAME
             valueFrom:
@@ -67,6 +66,6 @@ spec:
       - name: cpusets-configmaps
         configMap:
           name: cpusets-configmaps
-      serviceAccountName:{{ include "kubeservice-cpupools-controller.controller.serviceAccountName" . }}
+      serviceAccountName: {{ include "kubeservice-cpupools-controller.controller.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
