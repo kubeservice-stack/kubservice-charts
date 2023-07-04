@@ -22,6 +22,7 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      terminationGracePeriodSeconds: 10
       containers:
         - name: {{ include "kubeservice-cpupools-controller.deviceplugin.serviceAccountName" . }}
           image: "{{ .Values.deviceplugin.image.repository }}:{{ .Values.deviceplugin.image.tag | default .Chart.AppVersion }}"
