@@ -41,7 +41,7 @@ spec:
           - name: FILE_MATCH
             value: "cpusets-*.yaml"
           resources:
-            toYaml .Values.controller.resources | nindent 12 }}
+            toYaml .Values.deviceplugin.resources | nindent 12 }}
       volumes:
       - name: devicesock 
         hostPath:
