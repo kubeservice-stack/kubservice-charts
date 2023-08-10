@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kubservice-charts)](https://artifacthub.io/packages/search?repo=kubservice-charts)
+[![Release Charts](https://github.com/kubeservice-stack/kubservice-charts/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/kubeservice-stack/kubservice-charts/actions/workflows/release.yml)
 
 The code is provided as-is with no warranties.
 
