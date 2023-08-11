@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "kubeservice-cosign-webhook.fullname" . }}
+  namespace: {{ .Release.Namespace | quote }}
+  labels:
+    {{- include "kubeservice-cosign-webhook.labels" . | nindent 4 }}
+spec:
+{{- if ge (.Capabilities.KubeVersion.Minor | int) 20 }}
+  ipFamilies:
+{{ toYaml .Values.service.ipFamilies | indent 2 }}
+  ipFamilyPolicy: {{ .Values.service.ipFamilyPolicy }}
+{{- end }}
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: webhook
+      protocol: TCP
+      name: webhook
+  selector:
+    {{- include "kubeservice-cosign-webhook.selectorLabels" . | nindent 4 }}
