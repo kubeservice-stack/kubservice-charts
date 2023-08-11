@@ -1,0 +1,10 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: '{{ include "kubeservice-cosign-webhook.fullname" . }}-selfsigned-issuer'
+  namespace: {{ .Release.Namespace | quote }}
+  annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-weight: "1"
+spec:
+  selfSigned: {}
