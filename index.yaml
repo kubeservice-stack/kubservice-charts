@@ -99,6 +99,38 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.16.1
+    created: "2023-08-11T05:00:52.852698868Z"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.11.4
+    description: A Helm chart for Kubernetes
+    digest: bfbc33341f30e56d9b7d74130c6adc70c1252fac3b517faae6acd5b966b57b47
+    home: https://github.com/kubeservice-stack/custom-limit-range
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - admission webhook
+    - Limit Ranges
+    - Kubernetes
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-custom-limitrange
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-custom-limitrange-1.2.0/kubeservice-custom-limitrange-1.2.0.tgz
+    version: 1.2.0
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 1.16.1
     created: "2023-08-11T04:41:41.600915555Z"
     dependencies:
     - alias: cert-manager
@@ -583,4 +615,4 @@ entries:
     urls:
     - https://kubeservice-stack.github.io/kubservice-charts/prometheus-pingmesh-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2023-08-11T04:41:41.586075349Z"
+generated: "2023-08-11T05:00:52.85275017Z"
