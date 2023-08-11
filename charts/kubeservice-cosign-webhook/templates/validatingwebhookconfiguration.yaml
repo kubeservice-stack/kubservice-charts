@@ -15,7 +15,7 @@ webhooks:
         name: {{ include "kubeservice-cosign-webhook.fullname" . }}
         namespace: {{ .Release.Namespace | quote }}
         path: /validate-kubeservice-cn-v1-cosignkey
-        port: 443
+        port: {{ .Values.service.port }}
     rules:
       - operations: ["CREATE", "UPDATE"]
         apiGroups: ["kubeservice.cn"]

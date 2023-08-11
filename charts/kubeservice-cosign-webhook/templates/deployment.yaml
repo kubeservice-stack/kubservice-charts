@@ -36,7 +36,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: webhook
-              containerPort: {{ .Values.service.port }}
+              containerPort: 8443
               protocol: TCP
             - containerPort: 8080
               name: metrics

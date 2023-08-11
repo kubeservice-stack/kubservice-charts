@@ -14,7 +14,7 @@ webhooks:
         name: {{ include "kubeservice-cosign-webhook.fullname" . }}
         namespace: {{ .Release.Namespace | quote }}
         path: "/mutate-cosign-verify"
-        port: 443
+        port: {{ .Values.service.port }}
     rules:
       - operations: ["CREATE", "UPDATE"]
         apiGroups: [""]
