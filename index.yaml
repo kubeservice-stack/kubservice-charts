@@ -9,6 +9,41 @@ entries:
         fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
+    appVersion: v1.1.0
+    created: "2023-08-15T04:56:42.331584911Z"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.11.*
+    description: Kubernetes admission webhook that uses cosign tools Container Sign
+      Verify.
+    digest: 44b4187e5004ff2313f6c64702b0c1f77f06cd979c9a262710019ffa1a11ac1d
+    home: https://github.com/kubeservice-stack/cosign-webhook
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - admission webhook
+    - cosign
+    - container sign verify
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-cosign-webhook
+    sources:
+    - https://github.com/kubeservice-stack/cosign-webhook
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-cosign-webhook-1.1.0/kubeservice-cosign-webhook-1.1.0.tgz
+    version: 1.1.0
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
     appVersion: v1.0.0
     created: "2023-08-14T01:36:41.087046213Z"
     dependencies:
@@ -650,4 +685,4 @@ entries:
     urls:
     - https://kubeservice-stack.github.io/kubservice-charts/prometheus-pingmesh-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2023-08-14T01:36:41.07506949Z"
+generated: "2023-08-15T04:56:42.331697613Z"
