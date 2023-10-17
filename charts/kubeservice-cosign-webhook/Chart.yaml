@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 1.1.0
+version: 1.1.1
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
@@ -36,7 +36,7 @@ sources:
 - https://github.com/kubeservice-stack/cosign-webhook
 dependencies:
   - name: cert-manager
-    version: v1.11.*
+    version: v1.13.*
     repository: https://charts.jetstack.io
     alias: cert-manager
     condition: cert-manager.enabled
