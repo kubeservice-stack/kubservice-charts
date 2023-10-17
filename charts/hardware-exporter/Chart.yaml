@@ -1,0 +1,22 @@
+apiVersion: v2
+appVersion: 1.5.0
+description: Prometheus exporter for hardware and you can use this exporter to get server's bmc and bios' info
+home: https://github.com/kubeservice-stack/hardware-exporter/
+keywords:
+- prometheus
+- hardware-exporter
+- monitoring
+maintainers:
+- email: dlswdjtu@163.com
+  name: shenwei
+name: hardware-exporter
+sources:
+- https://github.com/kubeservice-stack/hardware-exporter/
+type: application
+version: 0.1.0
+dependencies:
+- name: common
+  repository: https://charts.bitnami.com/bitnami
+  tags:
+  - bitnami-common
+  version: 2.2.3
