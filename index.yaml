@@ -10,6 +10,41 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: v1.1.0
+    created: "2023-10-17T11:43:29.477693134Z"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.13.*
+    description: Kubernetes admission webhook that uses cosign tools Container Sign
+      Verify.
+    digest: e6ef4f9285ccf31bc1deaa1879dd0ed933f79feb3b1df3358fab65346ca239bb
+    home: https://github.com/kubeservice-stack/cosign-webhook
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - admission webhook
+    - cosign
+    - container sign verify
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-cosign-webhook
+    sources:
+    - https://github.com/kubeservice-stack/cosign-webhook
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-cosign-webhook-1.1.1/kubeservice-cosign-webhook-1.1.1.tgz
+    version: 1.1.1
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: v1.1.0
     created: "2023-08-15T04:56:58.371237428Z"
     dependencies:
     - alias: cert-manager
@@ -160,6 +195,38 @@ entries:
     - https://kubeservice-stack.github.io/kubservice-charts/kubeservice-cpupools-controller-0.1.0.tgz
     version: 0.1.0
   kubeservice-custom-limitrange:
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 1.16.1
+    created: "2023-10-17T11:43:29.653406643Z"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.13.*
+    description: A Helm chart for Kubernetes
+    digest: a176156ab5bc461d7defa8304d0e15167484642830ef08d4fc47fe1bc7d522cc
+    home: https://github.com/kubeservice-stack/custom-limit-range
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - admission webhook
+    - Limit Ranges
+    - Kubernetes
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-custom-limitrange
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-custom-limitrange-1.2.1/kubeservice-custom-limitrange-1.2.1.tgz
+    version: 1.2.1
   - annotations:
       artifacthub.io/maintainers: |
         - name: dongjiang
@@ -390,6 +457,40 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.0.1
+    created: "2023-10-17T11:43:29.80435854Z"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.13.*
+    description: A Kubernetes Admission Webhook for Linux Container Resources View.
+    digest: c360ec3037b3c9105ad7dc7155dad0edd6af11664880094b63ac77e489e7b3a8
+    home: https://github.com/kubeservice-stack/lxcfs-webhook
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - admission webhook
+    - lxcfs
+    - resource views
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-lxcfs-webhook
+    sources:
+    - https://github.com/kubeservice-stack/lxcfs-webhook
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-lxcfs-webhook-1.1.2/kubeservice-lxcfs-webhook-1.1.2.tgz
+    version: 1.1.2
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 1.0.1
     created: "2023-08-15T04:56:58.397655538Z"
     dependencies:
     - alias: cert-manager
@@ -458,6 +559,42 @@ entries:
     - https://kubeservice-stack.github.io/kubservice-charts/kubeservice-lxcfs-webhook-1.0.0.tgz
     version: 1.0.0
   kubeservice-namespace-node-affinity:
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 1.0.1
+    created: "2023-10-17T11:43:29.953648016Z"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.13.*
+    description: A Helm chart for Kubernetes
+    digest: f0a8a8d15a70e59489667c8ca45d18b8677451a39a32d7b1de06c2ad1f888bc9
+    home: https://github.com/kubeservice-stack/namespace-node-affinity
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - admission webhook
+    - affintiy
+    - namespace
+    - node
+    - resource views
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-namespace-node-affinity
+    sources:
+    - https://github.com/kubeservice-stack/namespace-node-affinity
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-namespace-node-affinity-1.1.2/kubeservice-namespace-node-affinity-1.1.2.tgz
+    version: 1.1.2
   - annotations:
       artifacthub.io/maintainers: |
         - name: dongjiang
@@ -685,4 +822,4 @@ entries:
     urls:
     - https://kubeservice-stack.github.io/kubservice-charts/prometheus-pingmesh-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2023-08-15T04:56:58.349452308Z"
+generated: "2023-10-17T11:43:29.954011821Z"
