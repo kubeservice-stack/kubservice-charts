@@ -26,9 +26,9 @@ image:
   # Docker image registry.
   registry: docker.io
   # Docker image repository.
-  repository: dongjiang1989/ebpf-exporter
-  # Docker image tag.
-  tag: latest
+  repository: ghcr.io/cloudflare/ebpf_exporter
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
 
 # Name override.
 nameOverride: ""

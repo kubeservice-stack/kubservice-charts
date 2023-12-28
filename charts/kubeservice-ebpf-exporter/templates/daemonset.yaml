@@ -46,7 +46,7 @@ spec:
             {{- toYaml .Values.args | nindent 12 }}
           {{- end }}
           {{- if .Values.image }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           {{- end }}
           ports:

@@ -7,8 +7,8 @@ keywords:
 - kubernetes
 - ebpf
 type: application
-version: 1.1.1
-appVersion: 1.1.1
+version: 1.2.0
+appVersion: v2.3.0
 home: https://github.com/kubeservice-stack/kubservice-charts
 icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
 sources:
