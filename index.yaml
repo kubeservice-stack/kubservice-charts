@@ -339,6 +339,35 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: v2.3.0
+    created: "2023-12-29T01:46:44.881698444Z"
+    description: A Helm chart for ebpf_exporter
+    digest: bfa36016bb42987085aa9d5ed9e0e316437450c1eec2753325c99687bf92bd55
+    home: https://github.com/kubeservice-stack/kubservice-charts
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - metric
+    - prometheus
+    - kubernetes
+    - ebpf
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-ebpf-exporter
+    sources:
+    - https://github.com/kubeservice-stack/ebpf_exporter
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-ebpf-exporter-1.2.1/kubeservice-ebpf-exporter-1.2.1.tgz
+    version: 1.2.1
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: v2.3.0
     created: "2023-12-28T11:42:19.535670442Z"
     description: A Helm chart for ebpf_exporter
     digest: f814553c05127a9d749aa9b9814675cf9757898336b8a9c6788ef13597532431
@@ -851,4 +880,4 @@ entries:
     urls:
     - https://kubeservice-stack.github.io/kubservice-charts/prometheus-pingmesh-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2023-12-28T11:42:19.503512537Z"
+generated: "2023-12-29T01:46:44.881768354Z"
