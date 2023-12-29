@@ -2,9 +2,9 @@
 
 `eBPF Exporter` is a Prometheus exporter for custom eBPF metrics.
 
-[Kubeservice eBPF Exporter](https://github.com/kubeservice-stack/ebpf_exporter) motivation of this exporter is to allow you to write eBPF code and export metrics that are not otherwise accessible from the Linux kernel.
+[Kubeservice eBPF Exporter](https://github.com/cloudflare/ebpf_exporter) motivation of this exporter is to allow you to write eBPF code and export metrics that are not otherwise accessible from the Linux kernel.
 
-This chart creates a [Kubeservice eBPF Exporter](https://github.com/kubeservice-stack/ebpf_exporter) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
+This chart creates a [Kubeservice eBPF Exporter](https://github.com/cloudflare/ebpf_exporter) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 ## Source Code
 
@@ -63,13 +63,13 @@ $ helm inspect values kubeservice-ebpf-exporter
 $ helm show values kubeservice-ebpf-exporter
 ```
 
-See [kubeservice-stack/ebpf_exporter/README.md](https://github.com/kubeservice-stack/ebpf_exporter) for further information.
+See [kubeservice-stack/ebpf_exporter/README.md](https://github.com/cloudflare/ebpf_exporter) for further information.
 
 ## Values
 
 Parameter | Description | Default
 --------- | ----------- | -------
-`image.repository` | image repository | `dongjiang1989/ebpf-exporter`
+`image.repository` | image repository | `ghcr.io/cloudflare/ebpf_exporter`
 `image.tag` | image tag | `latest`
 `image.pullPolicy` |  image pull policy | `IfNotPresent`
 `service.type` | service type | `ClusterIP`
