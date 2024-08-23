@@ -745,6 +745,36 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.0.1
+    created: "2024-08-23T02:01:01.800784036Z"
+    description: deploy node-metrics, kubeservice-scheduler and kubeservice-scheduler-controller
+    digest: fe7ab11de4184aaffb267e68c16ca9569ef9dbbb53745434e30805b55305ede0
+    home: https://stack.kubeservice.cn/docs/%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/k8s-crane-plus-schduler/
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - Real resource
+    - Scheduler
+    - Controller
+    - Node Metrics
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-scheduler-plus
+    sources:
+    - https://github.com/kubeservice-stack/crane-scheduler
+    - https://github.com/kubeservice-stack/node-metrics
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-scheduler-plus-0.2.1/kubeservice-scheduler-plus-0.2.1.tgz
+    version: 0.2.1
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 1.0.1
     created: "2024-01-23T03:50:01.604272499Z"
     description: deploy node-metrics, kubeservice-scheduler and kubeservice-scheduler-controller
     digest: b167165142f5c2f8e7f5323b3966836ee43f0cf7224e3a46d28c40980fa217da
@@ -910,4 +940,4 @@ entries:
     urls:
     - https://kubeservice-stack.github.io/kubservice-charts/prometheus-pingmesh-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2024-01-23T03:50:01.552501906Z"
+generated: "2024-08-23T02:01:01.800864406Z"
