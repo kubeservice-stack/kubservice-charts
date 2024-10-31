@@ -31,6 +31,17 @@ spec:
       - name: lxcfs
         image: "{{ .Values.lxcfs.image.repository }}:{{ .Values.lxcfs.image.tag | default .Chart.AppVersion }}"
         imagePullPolicy: {{ .Values.lxcfs.image.pullPolicy }}
+        env:
+        - name: CONTAINER_REMOUNT_LXCFS
+          {{- if eq .Values.configmap.runtime "docker" }}
+          value: {{ .Files.Get "script/container_remount_lxcfs_docker.sh" | b64enc }}
+          {{- else }}
+          value: {{ .Files.Get "script/container_remount_lxcfs_containerd.sh" | b64enc }}
+          {{- end }}
+        lifecycle:
+          postStart:
+            exec:
+              command: ["bash", "-c", "echo ${CONTAINER_REMOUNT_LXCFS} | base64 -d > /opt/container_remount_lxcfs.sh ; chmod u+x /opt/container_remount_lxcfs.sh; /opt/container_remount_lxcfs.sh  2> /opt/lxcfs.log"]
         securityContext:
           privileged: true
         volumeMounts:
