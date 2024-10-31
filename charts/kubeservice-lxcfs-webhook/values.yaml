@@ -16,6 +16,7 @@ lxcfs:
     # Overrides the image tag whose default is the chart appVersion.
     tag: "v4.0.12"
 webhook:
+  customNamespaces: monitoring,calico-system
   image:
     repository: dongjiang1989/lxcfs-webhook
     pullPolicy: Always
@@ -95,3 +96,7 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+configmap:
+  enable: true
+  runtime: containerd

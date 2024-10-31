@@ -36,6 +36,11 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.webhook.image.repository }}:{{ .Values.webhook.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.webhook.image.pullPolicy }}
+          args:
+            - -customNamespaces="{{ .Values.webhook.customNamespaces }}"
+            - -alsologtostderr
+            - -v=4
+            - 2>&1
           ports:
             - name: http
               containerPort: 80
