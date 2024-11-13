@@ -83,4 +83,5 @@ spec:
           type: DirectoryOrCreate
       - hostPath:
           path: {{ .Values.lxcfs.log.path }}
+          type: DirectoryOrCreate
         name: datalog
