@@ -514,6 +514,40 @@ entries:
         fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
+    appVersion: 1.2.2
+    created: "2024-11-13T11:46:59.27567318Z"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.13.*
+    description: A Kubernetes Admission Webhook for Linux Container Resources View.
+    digest: b1f86d00e505f76daffa01aabc5b8469e0ea1a18c801f88d6f79aa82796bae0f
+    home: https://github.com/kubeservice-stack/lxcfs-webhook
+    icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
+    keywords:
+    - admission webhook
+    - lxcfs
+    - resource views
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang
+    name: kubeservice-lxcfs-webhook
+    sources:
+    - https://github.com/kubeservice-stack/lxcfs-webhook
+    type: application
+    urls:
+    - https://github.com/kubeservice-stack/kubservice-charts/releases/download/kubeservice-lxcfs-webhook-1.2.2/kubeservice-lxcfs-webhook-1.2.2.tgz
+    version: 1.2.2
+  - annotations:
+      artifacthub.io/maintainers: |
+        - name: dongjiang
+          email: dongjiang1989@126.com
+      artifacthub.io/signKey: |
+        fingerprint: 54145DF6791F044DDB2C9219F42BCA7408363131
+        url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
+    apiVersion: v2
     appVersion: 1.2.1
     created: "2024-11-13T11:35:08.903634237Z"
     dependencies:
@@ -1008,4 +1042,4 @@ entries:
     urls:
     - https://kubeservice-stack.github.io/kubservice-charts/prometheus-pingmesh-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-13T11:35:08.853448129Z"
+generated: "2024-11-13T11:46:59.275795568Z"
