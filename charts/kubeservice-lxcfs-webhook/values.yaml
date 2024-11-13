@@ -15,6 +15,8 @@ lxcfs:
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
     tag: "v4.0.12"
+  log:
+     path: /data/log
 webhook:
   customNamespaces: monitoring,calico-system
   image:

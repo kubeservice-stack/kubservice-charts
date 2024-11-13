@@ -38,10 +38,20 @@ spec:
           {{- else }}
           value: {{ .Files.Get "script/container_remount_lxcfs_containerd.sh" | b64enc }}
           {{- end }}
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
         lifecycle:
           postStart:
             exec:
-              command: ["bash", "-c", "echo ${CONTAINER_REMOUNT_LXCFS} | base64 -d > /opt/container_remount_lxcfs.sh ; chmod u+x /opt/container_remount_lxcfs.sh; /opt/container_remount_lxcfs.sh  2> /opt/lxcfs.log"]
+              command: ["bash", "-c", "echo ${CONTAINER_REMOUNT_LXCFS} | base64 -d > /opt/container_remount_lxcfs.sh ; chmod u+x /opt/container_remount_lxcfs.sh; /opt/container_remount_lxcfs.sh > /opt/log/lxcfs.log"]
         securityContext:
           privileged: true
         volumeMounts:
@@ -54,6 +64,9 @@ spec:
           mountPath: /usr/local
         - name: usr-lib64
           mountPath: /usr/lib64
+        - mountPath: /opt/log/
+          name: datalog
+          subPathExpr: $(NAMESPACE)/$(POD_NAME)
       volumes:
       - name: cgroup
         hostPath:
@@ -68,3 +81,6 @@ spec:
         hostPath:
           path: /var/lib/lxcfs
           type: DirectoryOrCreate
+      - hostPath:
+          path: {{ .Values.lxcfs.log.path }}
+        name: datalog
