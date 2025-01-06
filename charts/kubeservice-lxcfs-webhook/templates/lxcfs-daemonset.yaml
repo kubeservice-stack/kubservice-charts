@@ -48,10 +48,12 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: metadata.namespace
+        {{- if .Values.lxcfs.lifecycle.enabled }}
         lifecycle:
           postStart:
             exec:
               command: ["bash", "-c", "echo ${CONTAINER_REMOUNT_LXCFS} | base64 -d > /opt/container_remount_lxcfs.sh ; chmod u+x /opt/container_remount_lxcfs.sh; /opt/container_remount_lxcfs.sh > /opt/log/lxcfs.log"]
+        {{- end }}
         securityContext:
           privileged: true
         volumeMounts:
@@ -79,7 +81,7 @@ spec:
           path: /usr/lib64
       - name: lxcfs
         hostPath:
-          path: /var/lib/lxcfs
+          path: /var/lib/lxcfs/
           type: DirectoryOrCreate
       - hostPath:
           path: {{ .Values.lxcfs.log.path }}

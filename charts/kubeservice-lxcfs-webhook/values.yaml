@@ -17,6 +17,8 @@ lxcfs:
     tag: "v4.0.12"
   log:
      path: /data/log
+  lifecycle:
+     enabled: false
 webhook:
   customNamespaces: monitoring,calico-system
   image:
