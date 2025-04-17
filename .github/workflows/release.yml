@@ -20,7 +20,7 @@ jobs:
           git config user.email "dongjiang1989@126.com"
 
       - name: Install Helm
-        uses: azure/setup-helm@v1
+        uses: azure/setup-helm@v4
         with:
           version: v3.4.0
 
@@ -41,7 +41,7 @@ jobs:
         git config user.name "dongjiang1989"
         git config user.email "dongjiang1989@126.com"
     - name: Install Helm
-      uses: azure/setup-helm@v1
+      uses: azure/setup-helm@v4
       with:
         version: v3.4.0
     - name: Merge master back to gh-page
