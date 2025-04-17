@@ -10,7 +10,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: v1.1.0
-    created: "2025-04-16T07:39:42.166826272Z"
+    created: "2025-04-17T08:43:25.115164884Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -19,7 +19,7 @@ entries:
       version: v1.13.*
     description: Kubernetes admission webhook that uses cosign tools Container Sign
       Verify.
-    digest: e5b8f75cd245f66167de490e347c812e5cc31823d7888ba10a2ff27b1277acdb
+    digest: ef51d9deacd7ce7f65a35250afafc22202041f2aa68071d30d213835c2f582d1
     home: https://github.com/kubeservice-stack/cosign-webhook
     icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
     keywords:
@@ -45,7 +45,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: v1.1.0
-    created: "2025-04-16T07:39:42.163427474Z"
+    created: "2025-04-17T08:43:25.111135722Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -80,7 +80,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: v1.0.0
-    created: "2025-04-16T07:39:42.159365297Z"
+    created: "2025-04-17T08:43:25.107301831Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -115,7 +115,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: v1.0.0
-    created: "2025-04-16T07:39:42.156085972Z"
+    created: "2025-04-17T08:43:25.103521587Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -151,9 +151,9 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: v1.1.1
-    created: "2025-04-16T07:39:42.167868977Z"
+    created: "2025-04-17T08:43:25.117005941Z"
     description: A Helm chart cpuset pools to kubernetes node from https://github.com/kubeservice-stack/cpusets-controller
-    digest: fd4b869fead0d396ee152742937a12f267dd780b6d9c2bca578690daaae20a92
+    digest: adde13768085ffda139b8cfdebf76adc2fe991c0c1454017a5bc4c8372655786
     home: https://github.com/kubeservice-stack/cpusets-controller
     icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
     keywords:
@@ -177,7 +177,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: v1.1.0
-    created: "2025-04-16T07:39:42.167330292Z"
+    created: "2025-04-17T08:43:25.116433901Z"
     description: A Helm chart cpuset pools to kubernetes node from https://github.com/kubeservice-stack/cpusets-controller
     digest: 23db3e0e30c2bcc7a184f7be6961dfeb293c500161dc2f5053d7724b6e7f75a8
     home: https://github.com/kubeservice-stack/cpusets-controller
@@ -204,7 +204,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: v1.3.0
-    created: "2025-04-16T07:39:42.184244665Z"
+    created: "2025-04-17T08:43:25.133769625Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -212,7 +212,7 @@ entries:
       repository: https://charts.jetstack.io
       version: v1.13.*
     description: A Helm chart for Kubernetes
-    digest: aaf721a48eccad8f75f23af7252fd012fca661bcf96f52baa0b436e9bd6b610f
+    digest: d5fb27333c6fc47302d0c3c714d3f59288969b86642cba1342ac4b0311a6848f
     home: https://github.com/kubeservice-stack/custom-limit-range
     icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
     keywords:
@@ -236,7 +236,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.16.1
-    created: "2025-04-16T07:39:42.180698512Z"
+    created: "2025-04-17T08:43:25.129460436Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -268,7 +268,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.16.1
-    created: "2025-04-16T07:39:42.17693652Z"
+    created: "2025-04-17T08:43:25.12595742Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -300,7 +300,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.16.1
-    created: "2025-04-16T07:39:42.173167281Z"
+    created: "2025-04-17T08:43:25.121182618Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -325,7 +325,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-04-16T07:39:42.16881426Z"
+    created: "2025-04-17T08:43:25.117969855Z"
     description: A Helm chart for Kubernetes
     digest: 6fd3545b5ca952f51ae4d2d35ce6dbe954f1dec086416d43d3716c550f786f83
     home: https://github.com/kubeservice-stack/custom-limit-range
@@ -344,7 +344,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-04-16T07:39:42.168327392Z"
+    created: "2025-04-17T08:43:25.117500567Z"
     description: A Helm chart for Kubernetes
     digest: bec4c33446dc450aafd7c7ac6ea3a9da3c08363744b2ad5a2101c22aa04ef551
     home: https://github.com/kubeservice-stack/custom-limit-range
@@ -371,9 +371,9 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: v2.3.0
-    created: "2025-04-16T07:39:42.188857346Z"
+    created: "2025-04-17T08:43:25.137469519Z"
     description: A Helm chart for ebpf_exporter
-    digest: d0eeecd55be76854b5b66f4fe08f9b394d505e2e095ace0e49934afd904f50ac
+    digest: 073716757df23e76cf9c62bdebd1c1d390b7df1695ae25ac06394fcc5701747b
     home: https://github.com/kubeservice-stack/kubservice-charts
     icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
     keywords:
@@ -400,7 +400,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: v2.3.0
-    created: "2025-04-16T07:39:42.188274329Z"
+    created: "2025-04-17T08:43:25.136927645Z"
     description: A Helm chart for ebpf_exporter
     digest: f814553c05127a9d749aa9b9814675cf9757898336b8a9c6788ef13597532431
     home: https://github.com/kubeservice-stack/kubservice-charts
@@ -429,7 +429,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.1.1
-    created: "2025-04-16T07:39:42.187756142Z"
+    created: "2025-04-17T08:43:25.136394417Z"
     description: A Helm chart for ebpf_exporter
     digest: 17cbe286e0afa86a5e8138457e4ceadcbff8477563d504b99e1e684723af13fa
     home: https://github.com/kubeservice-stack/kubservice-charts
@@ -451,7 +451,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-04-16T07:39:42.187217578Z"
+    created: "2025-04-17T08:43:25.135858544Z"
     description: A Helm chart for ebpf_exporter
     digest: 48cf4cfddfac9f1a250c7537a368f83d6bd5fda729e26d429c0ed59d3c57d3e3
     home: https://github.com/kubeservice-stack/kubservice-charts
@@ -473,7 +473,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 1.0.2
-    created: "2025-04-16T07:39:42.186715402Z"
+    created: "2025-04-17T08:43:25.135314987Z"
     description: A Helm chart for ebpf_exporter
     digest: 864d9a0d15401a5b654e1c6e20aa98dc271672e19c50fbe1538b945922f65c73
     home: https://github.com/kubeservice-stack/kubservice-charts
@@ -495,7 +495,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-04-16T07:39:42.186170485Z"
+    created: "2025-04-17T08:43:25.134818378Z"
     description: A Helm chart for ebpf_exporter
     digest: 048e929206030ea44c6321a4927e940b55e8f4945d5272f40980a031298d0666
     home: https://github.com/kubeservice-stack/kubservice-charts
@@ -517,7 +517,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-16T07:39:42.185650385Z"
+    created: "2025-04-17T08:43:25.134276894Z"
     description: A Helm chart for ebpf_exporter
     digest: 1232f77623fdd986d24d363841c8533d9215277870a4cfa0c085a6cc4c333df3
     home: https://github.com/kubeservice-stack/kubservice-charts
@@ -547,7 +547,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.4.0
-    created: "2025-04-16T07:39:42.223792655Z"
+    created: "2025-04-17T08:43:25.166440575Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -555,7 +555,7 @@ entries:
       repository: https://charts.jetstack.io
       version: v1.13.*
     description: A Kubernetes Admission Webhook for Linux Container Resources View.
-    digest: 54d6eb21e52e191411ec845fa6dc8a7476111f6afc6ffebfacbf6846bf197cda
+    digest: 1b311bed1673ee846a836cf6cfa2720a9dec64152bb65195cd252046143c2e5e
     home: https://github.com/kubeservice-stack/lxcfs-webhook
     icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
     keywords:
@@ -581,7 +581,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.3.0
-    created: "2025-04-16T07:39:42.219287864Z"
+    created: "2025-04-17T08:43:25.162055346Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -615,7 +615,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.2.2
-    created: "2025-04-16T07:39:42.215841086Z"
+    created: "2025-04-17T08:43:25.158607524Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -649,7 +649,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.2.1
-    created: "2025-04-16T07:39:42.211436102Z"
+    created: "2025-04-17T08:43:25.154118428Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -683,7 +683,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.2.0
-    created: "2025-04-16T07:39:42.207935243Z"
+    created: "2025-04-17T08:43:25.150542136Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -717,7 +717,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-04-16T07:39:42.201220052Z"
+    created: "2025-04-17T08:43:25.146007945Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -751,7 +751,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-04-16T07:39:42.195054244Z"
+    created: "2025-04-17T08:43:25.142603494Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -778,7 +778,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-16T07:39:42.189800495Z"
+    created: "2025-04-17T08:43:25.13835694Z"
     description: A Kubernetes Admission Webhook for Linux Container Resources View.
     digest: f61bfaa57cbee6e8d563f2b42aeea6577d7420c10086564af570bf1f2b53de03
     home: https://github.com/kubeservice-stack/lxcfs-webhook
@@ -799,7 +799,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-16T07:39:42.189272069Z"
+    created: "2025-04-17T08:43:25.1378815Z"
     description: A Kubernetes Admission Webhook for Linux Container Resources View.
     digest: bed679b7bf72456d251c2c2b22f0f72090c6089310c53492d41d67f56eb4e9b2
     home: https://github.com/kubeservice-stack/lxcfs-webhook
@@ -828,7 +828,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-04-16T07:39:42.232474385Z"
+    created: "2025-04-17T08:43:25.175749954Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -836,7 +836,7 @@ entries:
       repository: https://charts.jetstack.io
       version: v1.13.*
     description: A Helm chart for Kubernetes
-    digest: 26ce16687123e41bb3817315c0d6b91c767052b9bc558cf828a3148d574c4a91
+    digest: 4c187ef7d01100fc9e3bf46d5bf5a11c1a0148195bf4208240f7f38a0217e12c
     home: https://github.com/kubeservice-stack/namespace-node-affinity
     icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
     keywords:
@@ -864,7 +864,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-04-16T07:39:42.22826212Z"
+    created: "2025-04-17T08:43:25.170865766Z"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -893,7 +893,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-16T07:39:42.22499635Z"
+    created: "2025-04-17T08:43:25.167586359Z"
     description: A Helm chart for Kubernetes
     digest: 78911db69b057f0455e8515f79fe63d8e58092f41a5c603c76a3a246d4b46d12
     home: https://github.com/kubeservice-stack/namespace-node-affinity
@@ -916,7 +916,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-16T07:39:42.224445984Z"
+    created: "2025-04-17T08:43:25.166991796Z"
     description: A Helm chart for Kubernetes
     digest: c083d68c73ddb6d4cd8397938dcf9560a28037131e4528f58786c9a8effb2fbc
     home: https://github.com/kubeservice-stack/namespace-node-affinity
@@ -947,9 +947,9 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-04-16T07:39:42.234070642Z"
+    created: "2025-04-17T08:43:25.177364204Z"
     description: deploy node-metrics, kubeservice-scheduler and kubeservice-scheduler-controller
-    digest: ce79af6c3faaa3a60831711039b1fe5529f90bfad6e4a273f8c4bfc8146c4690
+    digest: 3c39db783dcfc2ca54dc1644c82fdaa2665a7963c0bd60af1e89f5c2e2e3d1be
     home: https://stack.kubeservice.cn/docs/%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/k8s-crane-plus-schduler/
     icon: https://kubeservice-stack.github.io/kubservice-charts/logo.png
     keywords:
@@ -977,7 +977,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-04-16T07:39:42.233676477Z"
+    created: "2025-04-17T08:43:25.17696111Z"
     description: deploy node-metrics, kubeservice-scheduler and kubeservice-scheduler-controller
     digest: b167165142f5c2f8e7f5323b3966836ee43f0cf7224e3a46d28c40980fa217da
     home: https://stack.kubeservice.cn/docs/%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/k8s-crane-plus-schduler/
@@ -1007,7 +1007,7 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-04-16T07:39:42.233272464Z"
+    created: "2025-04-17T08:43:25.176573745Z"
     description: deploy node-metrics, kubeservice-scheduler and kubeservice-scheduler-controller
     digest: 25fffad4abf62befdf41219075f85e27710236143feac26f6f7e136da88e6879
     home: https://stack.kubeservice.cn/docs/%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/k8s-crane-plus-schduler/
@@ -1030,7 +1030,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-16T07:39:42.232877818Z"
+    created: "2025-04-17T08:43:25.176154961Z"
     description: deploy node-metrics, kubeservice-scheduler and kubeservice-scheduler-controller
     digest: 86b755e994ed3900342118b40e9ff61d8f7db1de60c3f207c3eb0db8a84e8098
     home: https://stack.kubeservice.cn/docs/%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/k8s-crane-plus-schduler/
@@ -1061,9 +1061,9 @@ entries:
         url: https://kubeservice-stack.github.io/kubservice-charts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.1.1
-    created: "2025-04-16T07:39:42.238893606Z"
+    created: "2025-04-17T08:43:25.182127068Z"
     description: Prometheus Pingmesh Exporter
-    digest: 83ed05e19bfe84b5bbde412eca9ee089e22cc92d66c8cfe897b63da7fe344873
+    digest: fdef916c38fcb657eb06d5ab7a582499e42d7c304d71b63de916bd7a1d9deb28
     home: https://github.com/kubeservice-stack/pingmesh-agent
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -1082,7 +1082,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-04-16T07:39:42.237709688Z"
+    created: "2025-04-17T08:43:25.180953481Z"
     description: Prometheus Pingmesh Exporter
     digest: dc48ed65733935bf407656670f17ce4af4f8e6e4833824db4bfacb378e76f51c
     home: https://github.com/kubeservice-stack/pingmesh-agent
@@ -1103,7 +1103,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-04-16T07:39:42.236478512Z"
+    created: "2025-04-17T08:43:25.179750741Z"
     description: Prometheus Pingmesh Exporter
     digest: f4a2aa1525ca38a532ad0c18cee398e18ce04d2271891aecf46d1de44f8db494
     home: https://github.com/kubeservice-stack/pingmesh-agent
@@ -1124,7 +1124,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 0.22.0
-    created: "2025-04-16T07:39:42.235266041Z"
+    created: "2025-04-17T08:43:25.178554362Z"
     description: Prometheus Pingmesh Exporter
     digest: 5be1ae6f8481484e82e36e112b14b804eb7591af6222f464f33304f5338cbe25
     home: https://github.com/kubeservice-stack/pingmesh-agent
@@ -1142,4 +1142,4 @@ entries:
     urls:
     - https://kubeservice-stack.github.io/kubservice-charts/prometheus-pingmesh-exporter-1.0.0.tgz
     version: 1.0.0
-generated: "2025-04-16T07:39:42.151835736Z"
+generated: "2025-04-17T08:43:25.098603229Z"
