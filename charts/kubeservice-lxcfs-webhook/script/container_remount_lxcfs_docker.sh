@@ -23,6 +23,7 @@ for container in $containers;do
                 echo nsenter --target $PID --mount -- mount -o bind "$LXCFS/sys/devices/system/cpu/$file" "/sys/devices/system/cpu/$file"
                 nsenter --target $PID --mount -- mount -o bind "$LXCFS/sys/devices/system/cpu/$file" "/sys/devices/system/cpu/$file"
             done 
+
         else
             echo "容器 $container 没有 mount 软件"
         fi
