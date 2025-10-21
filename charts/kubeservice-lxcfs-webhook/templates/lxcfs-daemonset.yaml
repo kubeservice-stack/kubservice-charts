@@ -60,7 +60,7 @@ spec:
         - name: cgroup
           mountPath: /sys/fs/cgroup
         - name: lxcfs
-          mountPath: /var/lib/lxcfs
+          mountPath: /var/lib/lxc
           mountPropagation: Bidirectional
         - name: usr-local
           mountPath: /usr/local
@@ -81,7 +81,7 @@ spec:
           path: /usr/lib64
       - name: lxcfs
         hostPath:
-          path: /var/lib/lxcfs/
+          path: /var/lib/lxc/
           type: DirectoryOrCreate
       - hostPath:
           path: {{ .Values.lxcfs.log.path }}
